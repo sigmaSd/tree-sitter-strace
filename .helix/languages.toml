@@ -1,0 +1,9 @@
+
+[[language]]
+name = "typescript"
+file-types = ["ts","js","tsx","jsx"]
+auto-format = true
+
+[language.language-server]
+command = "typescript-language-server"
+args = ["--stdio"]
