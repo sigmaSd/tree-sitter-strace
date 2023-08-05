@@ -1,5 +1,5 @@
 module.exports = grammar({
-  name: "strace_output",
+  name: "strace",
   rules: {
     source_file: ($) => seq(repeat($.line), $.exit),
     line: ($) =>
