@@ -40,7 +40,7 @@ module.exports = grammar({
     list: ($) =>
       seq(
         "[",
-        repeat(seq(choice($.integer, $.string), optional(","))),
+        repeat(seq($.parameter, optional(","))),
         "]",
       ),
     pointer: () => /0x[0-9a-fA-F]+/,
@@ -71,6 +71,7 @@ module.exports = grammar({
     _dictValue: ($) => choice(seq($.syscall, $.parameters), $.parameter),
     // TODO: dictvalue can be a syscall
     // _dictValue: ($) => choice($.value,$.integer,repeat(g)),
+    // array: ($) => seq('[', repeat(seq($.dict, optional(','))), ']'),
 
     exit: ($) => seq("+++", "exited", "with", $.integer, "+++"),
   },

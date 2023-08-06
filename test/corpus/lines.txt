@@ -14,7 +14,8 @@ execve("/usr/bin/ls", ["ls"], 0x7ffdcc909270 /* 84 vars */) = 0
         (string))
       (parameter
         (list
-          (string)))
+          (parameter
+            (string))))
       (parameter
         (pointer)
         (comment)))
@@ -151,3 +152,63 @@ newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPT
         (value)))
     (returnValue
       (integer))))
+
+================================================================================
+line with array
+================================================================================
+
+poll([{fd=0, events=0}, {fd=1, events=0}, {fd=2, events=0}], 3, 0) = 0 (Timeout)
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (syscall)
+    (parameters
+      (parameter
+        (list
+          (parameter
+            (dict
+              (dictElem
+                (dictKey)
+                (parameter
+                  (value
+                    (integer))))
+              (dictElem
+                (dictKey)
+                (parameter
+                  (value
+                    (integer))))))
+          (parameter
+            (dict
+              (dictElem
+                (dictKey)
+                (parameter
+                  (value
+                    (integer))))
+              (dictElem
+                (dictKey)
+                (parameter
+                  (value
+                    (integer))))))
+          (parameter
+            (dict
+              (dictElem
+                (dictKey)
+                (parameter
+                  (value
+                    (integer))))
+              (dictElem
+                (dictKey)
+                (parameter
+                  (value
+                    (integer))))))))
+      (parameter
+        (value
+          (integer)))
+      (parameter
+        (value
+          (integer))))
+    (returnValue
+      (integer)
+      (errorDescription))))

@@ -93,11 +93,7 @@
       "required": false,
       "types": [
         {
-          "type": "integer",
-          "named": true
-        },
-        {
-          "type": "string",
+          "type": "parameter",
           "named": true
         }
       ]

@@ -187,17 +187,8 @@
             "type": "SEQ",
             "members": [
               {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "integer"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "string"
-                  }
-                ]
+                "type": "SYMBOL",
+                "name": "parameter"
               },
               {
                 "type": "CHOICE",
