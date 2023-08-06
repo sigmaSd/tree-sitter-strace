@@ -67,7 +67,17 @@
   {
     "type": "errorDescription",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "values",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "errorName",
@@ -162,10 +172,6 @@
         },
         {
           "type": "string",
-          "named": true
-        },
-        {
-          "type": "value",
           "named": true
         },
         {
@@ -357,6 +363,10 @@
     "named": false
   },
   {
+    "type": "Ioctl() ",
+    "named": false
+  },
+  {
     "type": "NULL",
     "named": false
   },
@@ -378,6 +388,10 @@
   },
   {
     "type": "exited",
+    "named": false
+  },
+  {
+    "type": "flags",
     "named": false
   },
   {

@@ -53,7 +53,8 @@ access("/etc/ld.so.preload", R_OK)      = 0
         (string
           (string_content)))
       (parameter
-        (value)))
+        (values
+          (value))))
     (returnValue
       (integer))))
 
@@ -70,16 +71,18 @@ read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 s\0\0\0\0\0\0"..., 832) 
     (syscall)
     (parameters
       (parameter
-        (value
-          (integer)))
+        (values
+          (value
+            (integer))))
       (parameter
         (string
           (string_content)
           (string_content)
           (string_content)))
       (parameter
-        (value
-          (integer))))
+        (values
+          (value
+            (integer)))))
     (returnValue
       (integer))))
 
@@ -96,8 +99,9 @@ newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=42992, ...}, AT_EMPTY_PATH) = 0
     (syscall)
     (parameters
       (parameter
-        (value
-          (integer)))
+        (values
+          (value
+            (integer))))
       (parameter
         (string))
       (parameter
@@ -112,10 +116,12 @@ newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=42992, ...}, AT_EMPTY_PATH) = 0
           (dictElem
             (dictKey)
             (parameter
-              (value
-                (integer))))))
+              (values
+                (value
+                  (integer)))))))
       (parameter
-        (value)))
+        (values
+          (value))))
     (returnValue
       (integer))))
 
@@ -132,8 +138,9 @@ newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPT
     (syscall)
     (parameters
       (parameter
-        (value
-          (integer)))
+        (values
+          (value
+            (integer))))
       (parameter
         (string))
       (parameter
@@ -152,10 +159,12 @@ newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPT
               (parameter
                 (pointer))
               (parameter
-                (value
-                  (integer)))))))
+                (values
+                  (value
+                    (integer))))))))
       (parameter
-        (value)))
+        (values
+          (value))))
     (returnValue
       (integer))))
 
@@ -178,43 +187,51 @@ poll([{fd=0, events=0}, {fd=1, events=0}, {fd=2, events=0}], 3, 0) = 0 (Timeout)
               (dictElem
                 (dictKey)
                 (parameter
-                  (value
-                    (integer))))
+                  (values
+                    (value
+                      (integer)))))
               (dictElem
                 (dictKey)
                 (parameter
-                  (value
-                    (integer))))))
+                  (values
+                    (value
+                      (integer)))))))
           (parameter
             (dict
               (dictElem
                 (dictKey)
                 (parameter
-                  (value
-                    (integer))))
+                  (values
+                    (value
+                      (integer)))))
               (dictElem
                 (dictKey)
                 (parameter
-                  (value
-                    (integer))))))
+                  (values
+                    (value
+                      (integer)))))))
           (parameter
             (dict
               (dictElem
                 (dictKey)
                 (parameter
-                  (value
-                    (integer))))
+                  (values
+                    (value
+                      (integer)))))
               (dictElem
                 (dictKey)
                 (parameter
-                  (value
-                    (integer))))))))
+                  (values
+                    (value
+                      (integer)))))))))
       (parameter
-        (value
-          (integer)))
+        (values
+          (value
+            (integer))))
       (parameter
-        (value
-          (integer))))
+        (values
+          (value
+            (integer)))))
     (returnValue
       (integer)
       (errorDescription))))
@@ -232,13 +249,16 @@ epoll_ctl(3, EPOLL_CTL_ADD, 4, {events=EPOLLIN|EPOLLRDHUP|EPOLLET, data={u32=214
     (syscall)
     (parameters
       (parameter
-        (value
-          (integer)))
+        (values
+          (value
+            (integer))))
       (parameter
-        (value))
+        (values
+          (value)))
       (parameter
-        (value
-          (integer)))
+        (values
+          (value
+            (integer))))
       (parameter
         (dict
           (dictElem
@@ -255,13 +275,15 @@ epoll_ctl(3, EPOLL_CTL_ADD, 4, {events=EPOLLIN|EPOLLRDHUP|EPOLLET, data={u32=214
                 (dictElem
                   (dictKey)
                   (parameter
-                    (value
-                      (integer))))
+                    (values
+                      (value
+                        (integer)))))
                 (dictElem
                   (dictKey)
                   (parameter
-                    (value
-                      (integer))))))))))
+                    (values
+                      (value
+                        (integer)))))))))))
     (returnValue
       (integer))))
 
@@ -278,14 +300,16 @@ rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
     (syscall)
     (parameters
       (parameter
-        (value))
+        (values
+          (value)))
       (parameter
         (list))
       (parameter
         (list))
       (parameter
-        (value
-          (integer))))
+        (values
+          (value
+            (integer)))))
     (returnValue
       (integer))))
 
@@ -328,8 +352,9 @@ clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYS
             (dictElem
               (dictKey)
               (parameter
-                (value
-                  (integer))))
+                (values
+                  (value
+                    (integer)))))
             (dictElem
               (dictKey)
               (parameter
@@ -348,11 +373,13 @@ clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYS
               (parameter
                 (list
                   (parameter
-                    (value
-                      (integer)))))))))
+                    (values
+                      (value
+                        (integer))))))))))
       (parameter
-        (value
-          (integer))))
+        (values
+          (value
+            (integer)))))
     (returnValue
       (integer))))
 
@@ -369,19 +396,23 @@ fcntl(3, F_GETFL)                       = 0 (flags O_RDONLY)
     (syscall)
     (parameters
       (parameter
-        (value
-          (integer)))
+        (values
+          (value
+            (integer))))
       (parameter
-        (value)))
+        (values
+          (value))))
     (returnValue
       (integer)
-      (errorDescription))))
+      (errorDescription
+        (values
+          (value))))))
 
 ================================================================================
-macros
+flags error one flag
 ================================================================================
 
-wait4(353295, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 353295
+fcntl(3, F_GETFL)                       = 0 (flags O_RDONLY)
 
 --------------------------------------------------------------------------------
 
@@ -390,19 +421,14 @@ wait4(353295, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 353295
     (syscall)
     (parameters
       (parameter
-        (value
-          (integer)))
+        (values
+          (value
+            (integer))))
       (parameter
-        (list
-          (parameter
-            (dict
-              (dictElem
-                (macro)
-                (macro)
-                (integer))))))
-      (parameter
-        (value
-          (integer)))
-      (parameter))
+        (values
+          (value))))
     (returnValue
-      (integer))))
+      (integer)
+      (errorDescription
+        (values
+          (value))))))

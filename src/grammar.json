@@ -129,10 +129,6 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "value"
-            },
-            {
-              "type": "SYMBOL",
               "name": "string"
             },
             {
@@ -334,7 +330,7 @@
           "name": "value"
         },
         {
-          "type": "REPEAT1",
+          "type": "REPEAT",
           "content": {
             "type": "SEQ",
             "members": [
@@ -439,8 +435,30 @@
           "value": "("
         },
         {
-          "type": "PATTERN",
-          "value": "[a-zA-Z_ ]+"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "flags"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "values"
+                }
+              ]
+            },
+            {
+              "type": "PATTERN",
+              "value": "[^f][a-zA-Z_ ]*"
+            },
+            {
+              "type": "STRING",
+              "value": "Ioctl() "
+            }
+          ]
         },
         {
           "type": "STRING",

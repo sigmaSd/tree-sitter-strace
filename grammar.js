@@ -22,7 +22,6 @@ module.exports = grammar({
     parameter: ($) =>
       seq(
         choice(
-          $.value,
           $.string,
           $.list,
           $.pointer,
@@ -62,7 +61,7 @@ module.exports = grammar({
         "]",
       ),
     pointer: () => /0x[0-9a-fA-F]+/,
-    values: ($) => seq($.value, repeat1(seq(choice("|", "*"), $.value))),
+    values: ($) => seq($.value, repeat(seq(choice("|", "*"), $.value))),
     value: ($) => choice(/[A-Z0-9_]+/, $.integer),
     comment: () => /\/\*.*\*\//,
     _newline: () => /\r?\n/,
@@ -74,7 +73,15 @@ module.exports = grammar({
         optional($.errorDescription),
       ),
     errorName: () => /[A-Z]+/,
-    errorDescription: () => seq("(", /[a-zA-Z_ ]+/, ")"),
+    errorDescription: ($) => seq(
+      "(",
+      choice(
+        seq("flags", $.values),
+        /[^f][a-zA-Z_ ]*/,
+        // hardcode for easy success
+        "Ioctl() ",
+      ),
+      ")"),
 
     dictFn: $ => seq($.dict, "=>", $.dict),
     dict: ($) => seq(
