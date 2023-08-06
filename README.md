@@ -24,9 +24,9 @@ file-types = ["strace"]
 roots = []
 ```
 ```
+hx -g fetch && hx -g build
 mkdir -p ~/.config/helix/runtime/queries/strace
 ln -s ~/.config/helix/runtime/grammars/sources/strace/queries/highlights.scm  ~/.config/helix/runtime/queries/strace/highlights.scm
-hx -g fetch && hx -g build
 hx test.strace # should work now
 ```
 
