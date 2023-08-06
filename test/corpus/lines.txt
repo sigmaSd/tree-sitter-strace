@@ -212,3 +212,49 @@ poll([{fd=0, events=0}, {fd=1, events=0}, {fd=2, events=0}], 3, 0) = 0 (Timeout)
     (returnValue
       (integer)
       (errorDescription))))
+
+================================================================================
+dictkey is alphanumeric
+================================================================================
+
+epoll_ctl(3, EPOLL_CTL_ADD, 4, {events=EPOLLIN|EPOLLRDHUP|EPOLLET, data={u32=2147483648, u64=2147483648}}) = 0
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (syscall)
+    (parameters
+      (parameter
+        (value
+          (integer)))
+      (parameter
+        (value))
+      (parameter
+        (value
+          (integer)))
+      (parameter
+        (dict
+          (dictElem
+            (dictKey)
+            (parameter
+              (values
+                (value)
+                (value)
+                (value))))
+          (dictElem
+            (dictKey)
+            (parameter
+              (dict
+                (dictElem
+                  (dictKey)
+                  (parameter
+                    (value
+                      (integer))))
+                (dictElem
+                  (dictKey)
+                  (parameter
+                    (value
+                      (integer))))))))))
+    (returnValue
+      (integer))))

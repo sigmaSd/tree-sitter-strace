@@ -415,7 +415,7 @@
     },
     "dictKey": {
       "type": "PATTERN",
-      "value": "[a-z_]+"
+      "value": "[a-z_][a-z_0-9]+"
     },
     "_dictValue": {
       "type": "CHOICE",
