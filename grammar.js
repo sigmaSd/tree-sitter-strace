@@ -1,3 +1,5 @@
+/// <reference path="./grammar.d.ts" />
+
 module.exports = grammar({
   name: "strace",
   rules: {
