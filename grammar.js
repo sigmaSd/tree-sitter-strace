@@ -12,7 +12,7 @@ module.exports = grammar({
         $.returnValue,
         $._newline,
       ),
-    syscall: ($) => /[a-zA-Z][a-zA-Z0-9_]*/,
+    syscall: () => /[a-zA-Z][a-zA-Z0-9_]*/,
     parameters: ($) =>
       seq("(", optional(seq($.parameter, repeat(seq(",", $.parameter)))), ")"),
 
@@ -30,7 +30,7 @@ module.exports = grammar({
         optional($.comment),
         optional("..."),
       ),
-    integer: ($) => /-?\d+/,
+    integer: () => /-?\d+/,
     string: ($) =>
       seq(
         '"',
@@ -52,21 +52,21 @@ module.exports = grammar({
         $.integer,
         $.string,
       ),
-    pointer: ($) => /0x[0-9a-fA-F]+/,
+    pointer: () => /0x[0-9a-fA-F]+/,
     idents: ($) => seq($.ident, repeat(seq("|", $.ident))),
-    ident: ($) => /[a-zA-Z0-9_*]+/,
-    comment: ($) => /\/\*.*\*\//,
-    _escape_sequence: ($) => token.immediate(seq("\\", /./)),
-    _newline: ($) => /\r?\n/,
-    rest: ($) => /[^\n]*/,
+    ident: () => /[a-zA-Z0-9_*]+/,
+    comment: () => /\/\*.*\*\//,
+    _escape_sequence: () => token.immediate(seq("\\", /./)),
+    _newline: () => /\r?\n/,
+    rest: () => /[^\n]*/,
     returnValue: ($) =>
       seq(
         choice($.integer, $.pointer, "?"),
         optional($.errorName),
         optional($.errorDescription),
       ),
-    errorName: ($) => /[A-Z]+/,
-    errorDescription: ($) => seq("(", /[a-zA-Z ]+/, ")"),
+    errorName: () => /[A-Z]+/,
+    errorDescription: () => seq("(", /[a-zA-Z ]+/, ")"),
     dict: ($) => seq(
       "{",
       seq(

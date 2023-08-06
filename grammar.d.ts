@@ -1,4 +1,4 @@
-// chatgpt generated types
+// chatgpt generated types + manual editing
 // only for convinience and making the editor less red
 // might be incorrect
 
@@ -198,24 +198,25 @@ declare function normalize(value: any): { type: string; value: any; };
  */
 declare function RuleBuilder(ruleMap: object): typeof Proxy;
 
-/**
- * Creates a new grammar based on the provided base grammar and options.
- * @param {object} baseGrammar - The base grammar object.
- * @param {object} options - The options for the new grammar.
- * @throws {Error} Throws an error if the grammar name is invalid or rules are not functions.
- * @returns {object} The generated grammar object.
- */
-declare function grammar(baseGrammar: object, options?: object): {
+interface BaseGrammar {
   name: string;
   word: string;
-  rules: { [key: string]: any };
+  rules: { [key: string]: ($: BaseGrammar["rules"]) => any };
   extras: { type: string; value: any }[];
   conflicts: string[][];
   precedences: { value: number; content: any }[][];
   externals: { type: string; value: any }[];
   inline: string[];
   supertypes: string[];
-};
+}
+/**
+ * Creates a new grammar based on the provided base grammar and options.
+ * @param {BaseGrammar} baseGrammar - The base grammar object.
+ * @param {object} options - The options for the new grammar.
+ * @throws {Error} Throws an error if the grammar name is invalid or rules are not functions.
+ * @returns {any} The generated grammar object.
+ */
+declare function grammar(baseGrammar: Partial<BaseGrammar>, options?: object): any
 
 /**
  * Checks the number of arguments passed to a grammar rule function and throws an error if more than one rule argument is provided.
