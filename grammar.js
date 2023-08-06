@@ -16,7 +16,7 @@ module.exports = grammar({
 
     // 374673 munmap(0x7f8f32639000, 1851392 <unfinished ...>
     // 374673 <... close resumed>)             = 0
-    interleaf: $ => /.*<.*\.\.\..*>.*/,
+    interleaf: $ => seq($.pid, /.*<.*\.\.\..*>.*/),
     signal: ($) => seq("---", $.value, $.dict, "---"),
     pid: $ => $.integer,
     syscall: () => /[a-z][a-z0-9_]*/,

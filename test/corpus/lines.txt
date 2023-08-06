@@ -596,5 +596,9 @@ Interleaf
 --------------------------------------------------------------------------------
 
 (source_file
-  (interleaf)
-  (interleaf))
+  (interleaf
+    (pid
+      (integer)))
+  (interleaf
+    (pid
+      (integer))))

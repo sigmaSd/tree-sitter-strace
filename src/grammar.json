@@ -63,8 +63,17 @@
       ]
     },
     "interleaf": {
-      "type": "PATTERN",
-      "value": ".*<.*\\.\\.\\..*>.*"
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "pid"
+        },
+        {
+          "type": "PATTERN",
+          "value": ".*<.*\\.\\.\\..*>.*"
+        }
+      ]
     },
     "signal": {
       "type": "SEQ",
