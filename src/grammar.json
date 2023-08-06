@@ -7,8 +7,17 @@
         {
           "type": "REPEAT",
           "content": {
-            "type": "SYMBOL",
-            "name": "line"
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "line"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "signal"
+              }
+            ]
           }
         },
         {
@@ -47,6 +56,27 @@
         {
           "type": "SYMBOL",
           "name": "_newline"
+        }
+      ]
+    },
+    "signal": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "---"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "value"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dict"
+        },
+        {
+          "type": "STRING",
+          "value": "---"
         }
       ]
     },
@@ -495,19 +525,78 @@
       ]
     },
     "dictElem": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "dictKey"
+            },
+            {
+              "type": "STRING",
+              "value": "="
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_dictValue"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "macro"
+            },
+            {
+              "type": "REPEAT1",
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": "&&"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "macro"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "STRING",
+              "value": "=="
+            },
+            {
+              "type": "SYMBOL",
+              "name": "integer"
+            }
+          ]
+        }
+      ]
+    },
+    "macro": {
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "dictKey"
+          "type": "PATTERN",
+          "value": "[A-Z]+"
         },
         {
           "type": "STRING",
-          "value": "="
+          "value": "("
         },
         {
-          "type": "SYMBOL",
-          "name": "_dictValue"
+          "type": "PATTERN",
+          "value": "[a-z]+"
+        },
+        {
+          "type": "STRING",
+          "value": ")"
         }
       ]
     },

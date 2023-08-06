@@ -376,3 +376,33 @@ fcntl(3, F_GETFL)                       = 0 (flags O_RDONLY)
     (returnValue
       (integer)
       (errorDescription))))
+
+================================================================================
+macros
+================================================================================
+
+wait4(353295, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 353295
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (syscall)
+    (parameters
+      (parameter
+        (value
+          (integer)))
+      (parameter
+        (list
+          (parameter
+            (dict
+              (dictElem
+                (macro)
+                (macro)
+                (integer))))))
+      (parameter
+        (value
+          (integer)))
+      (parameter))
+    (returnValue
+      (integer))))

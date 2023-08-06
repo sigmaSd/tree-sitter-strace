@@ -3,7 +3,7 @@
 module.exports = grammar({
   name: "strace",
   rules: {
-    source_file: ($) => seq(repeat($.line), optional($.exit)),
+    source_file: ($) => seq(repeat(choice($.line, $.signal)), optional($.exit)),
     line: ($) =>
       seq(
         $.syscall,
@@ -12,6 +12,9 @@ module.exports = grammar({
         $.returnValue,
         $._newline,
       ),
+    //--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=353295, si_uid=1002, si_status=0, si_utime=0, si_stime=0} ---
+
+    signal: ($) => seq("---", $.value, $.dict, "---"),
     syscall: () => /[a-z][a-z0-9_]*/,
     parameters: ($) =>
       seq("(", repeat(seq($.parameter, optional(","))), ")"),
@@ -82,7 +85,13 @@ module.exports = grammar({
       ),
       optional(seq(",", "...")),
       "}"),
-    dictElem: ($) => seq($.dictKey, "=", $._dictValue),
+    dictElem: ($) => choice(
+      seq($.dictKey, "=", $._dictValue)
+      ,
+      //wait4(353295, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 353295
+      seq($.macro, repeat1(seq("&&", $.macro)), "==", $.integer)
+    ),
+    macro: ($) => seq(/[A-Z]+/, '(', /[a-z]+/, ')'),
     dictKey: () => /[a-z_][a-z_0-9]+/,
     _dictValue: ($) => choice(seq($.syscall, $.parameters), $.parameter),
 

@@ -27,6 +27,14 @@
           "named": true
         },
         {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "macro",
+          "named": true
+        },
+        {
           "type": "parameter",
           "named": true
         },
@@ -58,6 +66,11 @@
   },
   {
     "type": "errorDescription",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "errorName",
     "named": true,
     "fields": {}
   },
@@ -113,6 +126,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "macro",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "parameter",
@@ -200,6 +218,25 @@
     }
   },
   {
+    "type": "signal",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "dict",
+          "named": true
+        },
+        {
+          "type": "value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "source_file",
     "named": true,
     "fields": {},
@@ -213,6 +250,10 @@
         },
         {
           "type": "line",
+          "named": true
+        },
+        {
+          "type": "signal",
           "named": true
         }
       ]
@@ -268,6 +309,10 @@
     "named": false
   },
   {
+    "type": "&&",
+    "named": false
+  },
+  {
     "type": "(",
     "named": false
   },
@@ -288,11 +333,19 @@
     "named": false
   },
   {
+    "type": "---",
+    "named": false
+  },
+  {
     "type": "...",
     "named": false
   },
   {
     "type": "=",
+    "named": false
+  },
+  {
+    "type": "==",
     "named": false
   },
   {
@@ -321,10 +374,6 @@
   },
   {
     "type": "dictKey",
-    "named": true
-  },
-  {
-    "type": "errorName",
     "named": true
   },
   {
