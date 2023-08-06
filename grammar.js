@@ -71,7 +71,7 @@ module.exports = grammar({
         optional($.errorDescription),
       ),
     errorName: () => /[A-Z]+/,
-    errorDescription: () => seq("(", /[a-zA-Z ]+/, ")"),
+    errorDescription: () => seq("(", /[a-zA-Z_ ]+/, ")"),
 
     dictFn: $ => seq($.dict, "=>", $.dict),
     dict: ($) => seq(

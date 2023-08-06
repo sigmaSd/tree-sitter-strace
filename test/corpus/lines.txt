@@ -355,3 +355,24 @@ clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYS
           (integer))))
     (returnValue
       (integer))))
+
+================================================================================
+error description is [a-zA-Z_ ]
+================================================================================
+
+fcntl(3, F_GETFL)                       = 0 (flags O_RDONLY)
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (syscall)
+    (parameters
+      (parameter
+        (value
+          (integer)))
+      (parameter
+        (value)))
+    (returnValue
+      (integer)
+      (errorDescription))))
