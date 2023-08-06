@@ -264,3 +264,27 @@ epoll_ctl(3, EPOLL_CTL_ADD, 4, {events=EPOLLIN|EPOLLRDHUP|EPOLLET, data={u32=214
                       (integer))))))))))
     (returnValue
       (integer))))
+
+================================================================================
+tilda before array
+================================================================================
+
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (syscall)
+    (parameters
+      (parameter
+        (value))
+      (parameter
+        (list))
+      (parameter
+        (list))
+      (parameter
+        (value
+          (integer))))
+    (returnValue
+      (integer))))

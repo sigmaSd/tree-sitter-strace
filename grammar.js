@@ -52,6 +52,7 @@ module.exports = grammar({
 
     list: ($) =>
       seq(
+        optional('~'),
         "[",
         repeat(seq($.parameter, optional(","))),
         "]",
