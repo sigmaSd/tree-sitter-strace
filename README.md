@@ -10,7 +10,8 @@ npx tree-sitter parse examples/* --quiet --stat
 ```
 
 ## Use with helix
-- add this to helix languages.toml
+
+Add this to helix languages.toml
 ```toml
 [[grammar]]
 name = "strace"
@@ -22,10 +23,12 @@ scope = "source.strace"
 file-types = ["strace"]
 roots = []
 ```
-- `mkdir -p ~/.config/helix/runtime/queries/strace`
-- `ln -s ~/.config/helix/runtime/grammars/sources/strace/queries/highlights.scm  ~/.config/helix/runtime/queries/strace/highlights.scm`
-- `hx -g fetch && hx -g build`
-- `hx test.strace # should work now`
+```
+mkdir -p ~/.config/helix/runtime/queries/strace
+ln -s ~/.config/helix/runtime/grammars/sources/strace/queries/highlights.scm  ~/.config/helix/runtime/queries/strace/highlights.scm
+hx -g fetch && hx -g build
+hx test.strace # should work now
+```
 
 ## TODO
 
