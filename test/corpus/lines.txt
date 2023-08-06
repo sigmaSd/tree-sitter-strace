@@ -45,7 +45,8 @@ access("/etc/ld.so.preload", R_OK)      = 0
     (returnValue
       (integer)
       (errorName)
-      (errorDescription)))
+      (errorDescription
+        (errorContent))))
   (line
     (syscall)
     (parameters
@@ -234,7 +235,8 @@ poll([{fd=0, events=0}, {fd=1, events=0}, {fd=2, events=0}], 3, 0) = 0 (Timeout)
             (integer)))))
     (returnValue
       (integer)
-      (errorDescription))))
+      (errorDescription
+        (errorContent)))))
 
 ================================================================================
 dictkey is alphanumeric
@@ -405,8 +407,7 @@ fcntl(3, F_GETFL)                       = 0 (flags O_RDONLY)
     (returnValue
       (integer)
       (errorDescription
-        (values
-          (value))))))
+        (errorContent)))))
 
 ================================================================================
 flags error one flag
@@ -430,8 +431,7 @@ fcntl(3, F_GETFL)                       = 0 (flags O_RDONLY)
     (returnValue
       (integer)
       (errorDescription
-        (values
-          (value))))))
+        (errorContent)))))
 
 ================================================================================
 ioctl
@@ -451,9 +451,67 @@ ioctl(9, TCGETS, 0x7ffd9a3205d0)        = -1 ENOTTY (Ioctl() inappropré pour un
             (integer))))
       (parameter
         (values
-          (value))))
+          (value)))
+      (parameter
+        (pointer)))
     (returnValue
       (integer)
+      (errorName)
       (errorDescription
+        (errorContent)
+        (errorContent)))))
+
+================================================================================
+dictvalue is optional
+================================================================================
+
+ioctl(0, TCSETSW, {c_iflag=, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (syscall)
+    (parameters
+      (parameter
         (values
-          (value))))))
+          (value
+            (integer))))
+      (parameter
+        (values
+          (value)))
+      (parameter
+        (dict
+          (dictElem
+            (dictKey))
+          (dictElem
+            (dictKey)
+            (parameter
+              (values
+                (value)
+                (value)
+                (value)
+                (value)
+                (value)
+                (value)
+                (value)
+                (value))))
+          (dictElem
+            (dictKey)
+            (parameter
+              (values
+                (value)
+                (value)
+                (value))))
+          (dictElem
+            (dictKey)
+            (parameter
+              (values
+                (value)
+                (value)
+                (value)
+                (value)
+                (value)
+                (value)))))))
+    (returnValue
+      (integer))))

@@ -75,11 +75,17 @@ module.exports = grammar({
     errorName: () => /[A-Z]+/,
     errorDescription: ($) => seq(
       "(",
-      choice(
-        seq("flags", $.values),
-        /[^fI][a-zA-Z_ ]*/,
-      ),
-      ")"),
+      repeat(choice(
+        alias(token.immediate(prec(1, /[^\(\)]+/)),
+          $.errorContent),
+        seq("(", ")"),)),
+      ")"
+    ),
+    // choice(
+    //   seq("flags", $.values),
+    //   /[^fI][a-zA-Z_ ]*/,
+    // ),
+    // ")"),
 
     dictFn: $ => seq($.dict, "=>", $.dict),
     dict: ($) => seq(
@@ -91,7 +97,7 @@ module.exports = grammar({
       optional(seq(",", "...")),
       "}"),
     dictElem: ($) => choice(
-      seq($.dictKey, "=", $._dictValue)
+      seq($.dictKey, "=", optional($._dictValue))
       ,
       //wait4(353295, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 353295
       seq($.macro, repeat1(seq("&&", $.macro)), "==", $.integer)
