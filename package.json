@@ -15,5 +15,14 @@
   "devDependencies": {
     "@types/node": "^20.4.8",
     "tree-sitter-cli": "^0.20.8"
-  }
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.strace",
+      "file-types": [
+        "strace"
+      ],
+      "first-line-regex": "execve.*"
+    }
+  ]
 }
