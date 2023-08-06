@@ -12,7 +12,6 @@ module.exports = grammar({
         $.returnValue,
         $._newline,
       ),
-    //--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=353295, si_uid=1002, si_status=0, si_utime=0, si_stime=0} ---
 
     signal: ($) => seq("---", $.value, $.dict, "---"),
     syscall: () => /[a-z][a-z0-9_]*/,
@@ -24,7 +23,6 @@ module.exports = grammar({
         choice(
           $.string,
           $.list,
-          $.pointer,
           $.values,
           $.dict,
           $.dictFn,
@@ -62,7 +60,7 @@ module.exports = grammar({
       ),
     pointer: () => /0x[0-9a-fA-F]+/,
     values: ($) => seq($.value, repeat(seq(choice("|", "*"), $.value))),
-    value: ($) => choice(/[A-Z0-9_]+/, $.integer),
+    value: ($) => choice(/[A-Z0-9_]+/, $.integer, $.pointer),
     comment: () => /\/\*.*\*\//,
     _newline: () => /\r?\n/,
 

@@ -19,7 +19,9 @@ execve("/usr/bin/ls", ["ls"], 0x7ffdcc909270 /* 84 vars */) = 0
             (string
               (string_content)))))
       (parameter
-        (pointer)
+        (values
+          (value
+            (pointer)))
         (comment)))
     (returnValue
       (integer))))
@@ -38,10 +40,14 @@ access("/etc/ld.so.preload", R_OK)      = 0
     (syscall)
     (parameters
       (parameter
-        (pointer)
+        (values
+          (value
+            (pointer)))
         (comment))
       (parameter
-        (pointer)))
+        (values
+          (value
+            (pointer)))))
     (returnValue
       (integer)
       (errorName)
@@ -158,7 +164,9 @@ newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPT
             (syscall)
             (parameters
               (parameter
-                (pointer))
+                (values
+                  (value
+                    (pointer))))
               (parameter
                 (values
                   (value
@@ -346,11 +354,15 @@ clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYS
             (dictElem
               (dictKey)
               (parameter
-                (pointer)))
+                (values
+                  (value
+                    (pointer)))))
             (dictElem
               (dictKey)
               (parameter
-                (pointer)))
+                (values
+                  (value
+                    (pointer)))))
             (dictElem
               (dictKey)
               (parameter
@@ -360,15 +372,21 @@ clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYS
             (dictElem
               (dictKey)
               (parameter
-                (pointer)))
+                (values
+                  (value
+                    (pointer)))))
             (dictElem
               (dictKey)
               (parameter
-                (pointer)))
+                (values
+                  (value
+                    (pointer)))))
             (dictElem
               (dictKey)
               (parameter
-                (pointer))))
+                (values
+                  (value
+                    (pointer))))))
           (dict
             (dictElem
               (dictKey)
@@ -453,7 +471,9 @@ ioctl(9, TCGETS, 0x7ffd9a3205d0)        = -1 ENOTTY (Ioctl() inappropré pour un
         (values
           (value)))
       (parameter
-        (pointer)))
+        (values
+          (value
+            (pointer)))))
     (returnValue
       (integer)
       (errorName)
@@ -513,5 +533,55 @@ ioctl(0, TCSETSW, {c_iflag=, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cfl
                 (value)
                 (value)
                 (value)))))))
+    (returnValue
+      (integer))))
+
+================================================================================
+values can hold a pointer
+================================================================================
+
+rt_sigaction(SIGTSTP, {sa_handler=0x564e8ee75940, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_RESETHAND|0xffffffff00000000, sa_restorer=0x7f4c3171aab0}, NULL, 8) = 0
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (syscall)
+    (parameters
+      (parameter
+        (values
+          (value)))
+      (parameter
+        (dict
+          (dictElem
+            (dictKey)
+            (parameter
+              (values
+                (value
+                  (pointer)))))
+          (dictElem
+            (dictKey)
+            (parameter
+              (list)))
+          (dictElem
+            (dictKey)
+            (parameter
+              (values
+                (value)
+                (value)
+                (value)
+                (value
+                  (pointer)))))
+          (dictElem
+            (dictKey)
+            (parameter
+              (values
+                (value
+                  (pointer)))))))
+      (parameter)
+      (parameter
+        (values
+          (value
+            (integer)))))
     (returnValue
       (integer))))

@@ -137,10 +137,6 @@
             },
             {
               "type": "SYMBOL",
-              "name": "pointer"
-            },
-            {
-              "type": "SYMBOL",
               "name": "values"
             },
             {
@@ -366,6 +362,10 @@
         {
           "type": "SYMBOL",
           "name": "integer"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "pointer"
         }
       ]
     },

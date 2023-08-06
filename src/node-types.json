@@ -167,10 +167,6 @@
           "named": true
         },
         {
-          "type": "pointer",
-          "named": true
-        },
-        {
           "type": "string",
           "named": true
         },
@@ -290,6 +286,10 @@
       "types": [
         {
           "type": "integer",
+          "named": true
+        },
+        {
+          "type": "pointer",
           "named": true
         }
       ]
