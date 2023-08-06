@@ -1,7 +1,7 @@
 (syscall) @function
-(integer) @number
-(pointer) @number
-(ident) @ident
+(integer) @constant.numeric
+(pointer) @constant.numeric
+(ident) @label
 (string) @string
 (comment) @comment
 (errorName) @error
