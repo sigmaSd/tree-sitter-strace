@@ -14,7 +14,7 @@ module.exports = grammar({
       ),
     syscall: () => /[a-zA-Z][a-zA-Z0-9_]*/,
     parameters: ($) =>
-      seq("(", optional(seq($.parameter, repeat(seq(",", $.parameter)))), ")"),
+      seq("(", repeat(seq($.parameter, optional(","))), ")"),
 
     parameter: ($) =>
       seq(
@@ -34,31 +34,21 @@ module.exports = grammar({
     string: ($) =>
       seq(
         '"',
-        repeat(choice(
-          token.immediate(prec(1, /[^"\\]+/)),
-          $._escape_sequence,
-        )),
+        /[^"]*/,
         '"',
       ),
     list: ($) =>
       seq(
         "[",
-        repeat(seq($._list_element, ", ")),
-        optional($._list_element),
+        repeat(seq(choice($.integer, $.string), optional(","))),
         "]",
-      ),
-    _list_element: ($) =>
-      choice(
-        $.integer,
-        $.string,
       ),
     pointer: () => /0x[0-9a-fA-F]+/,
     idents: ($) => seq($.ident, repeat(seq("|", $.ident))),
-    ident: () => /[a-zA-Z0-9_*]+/,
+    ident: () => /[a-zA-Z0-9_]+/,
     comment: () => /\/\*.*\*\//,
-    _escape_sequence: () => token.immediate(seq("\\", /./)),
     _newline: () => /\r?\n/,
-    rest: () => /[^\n]*/,
+
     returnValue: ($) =>
       seq(
         choice($.integer, $.pointer, "?"),
@@ -67,6 +57,7 @@ module.exports = grammar({
       ),
     errorName: () => /[A-Z]+/,
     errorDescription: () => seq("(", /[a-zA-Z ]+/, ")"),
+
     dict: ($) => seq(
       "{",
       seq(
@@ -75,7 +66,11 @@ module.exports = grammar({
       ),
       optional(seq(",", "...")),
       "}"),
-    dictElem: ($) => seq($.ident, "=", $.parameter),
+    dictElem: ($) => seq($.ident, "=", $._dictValue),
+    _dictValue: ($) => $.parameter,
+    // TODO: dictvalue can be a syscall
+    //_dictValue: ($) => choice(seq($.syscall, $.parameters), $.parameter),
+
     exit: ($) => seq("+++", "exited", "with", $.integer, "+++"),
   },
 });

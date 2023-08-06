@@ -62,37 +62,28 @@
           "value": "("
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "SYMBOL",
-                  "name": "parameter"
-                },
-                {
-                  "type": "REPEAT",
-                  "content": {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "STRING",
-                        "value": ","
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "parameter"
-                      }
-                    ]
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "parameter"
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": ","
+                  },
+                  {
+                    "type": "BLANK"
                   }
-                }
-              ]
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
+                ]
+              }
+            ]
+          }
         },
         {
           "type": "STRING",
@@ -174,27 +165,8 @@
           "value": "\""
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "IMMEDIATE_TOKEN",
-                "content": {
-                  "type": "PREC",
-                  "value": 1,
-                  "content": {
-                    "type": "PATTERN",
-                    "value": "[^\"\\\\]+"
-                  }
-                }
-              },
-              {
-                "type": "SYMBOL",
-                "name": "_escape_sequence"
-              }
-            ]
-          }
+          "type": "PATTERN",
+          "value": "[^\"]*"
         },
         {
           "type": "STRING",
@@ -215,44 +187,36 @@
             "type": "SEQ",
             "members": [
               {
-                "type": "SYMBOL",
-                "name": "_list_element"
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "integer"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "string"
+                  }
+                ]
               },
               {
-                "type": "STRING",
-                "value": ", "
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": ","
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
               }
             ]
           }
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "_list_element"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
           "type": "STRING",
           "value": "]"
-        }
-      ]
-    },
-    "_list_element": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "integer"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "string"
         }
       ]
     },
@@ -287,35 +251,15 @@
     },
     "ident": {
       "type": "PATTERN",
-      "value": "[a-zA-Z0-9_*]+"
+      "value": "[a-zA-Z0-9_]+"
     },
     "comment": {
       "type": "PATTERN",
       "value": "\\/\\*.*\\*\\/"
     },
-    "_escape_sequence": {
-      "type": "IMMEDIATE_TOKEN",
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "STRING",
-            "value": "\\"
-          },
-          {
-            "type": "PATTERN",
-            "value": "."
-          }
-        ]
-      }
-    },
     "_newline": {
       "type": "PATTERN",
       "value": "\\r?\\n"
-    },
-    "rest": {
-      "type": "PATTERN",
-      "value": "[^\\n]*"
     },
     "returnValue": {
       "type": "SEQ",
@@ -456,9 +400,13 @@
         },
         {
           "type": "SYMBOL",
-          "name": "parameter"
+          "name": "_dictValue"
         }
       ]
+    },
+    "_dictValue": {
+      "type": "SYMBOL",
+      "name": "parameter"
     },
     "exit": {
       "type": "SEQ",
