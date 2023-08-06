@@ -11,11 +11,13 @@ execve("/usr/bin/ls", ["ls"], 0x7ffdcc909270 /* 84 vars */) = 0
     (syscall)
     (parameters
       (parameter
-        (string))
+        (string
+          (string_content)))
       (parameter
         (list
           (parameter
-            (string))))
+            (string
+              (string_content)))))
       (parameter
         (pointer)
         (comment)))
@@ -48,7 +50,8 @@ access("/etc/ld.so.preload", R_OK)      = 0
     (syscall)
     (parameters
       (parameter
-        (string))
+        (string
+          (string_content)))
       (parameter
         (value)))
     (returnValue
@@ -70,7 +73,10 @@ read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 s\0\0\0\0\0\0"..., 832) 
         (value
           (integer)))
       (parameter
-        (string))
+        (string
+          (string_content)
+          (string_content)
+          (string_content)))
       (parameter
         (value
           (integer))))

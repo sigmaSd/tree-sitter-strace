@@ -202,7 +202,17 @@
   {
     "type": "string",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "string_content",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "value",
@@ -304,6 +314,10 @@
   },
   {
     "type": "pointer",
+    "named": true
+  },
+  {
+    "type": "string_content",
     "named": true
   },
   {
