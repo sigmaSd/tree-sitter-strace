@@ -3,9 +3,10 @@
 module.exports = grammar({
   name: "strace",
   rules: {
-    source_file: ($) => seq(repeat(choice($.line, $.signal)), optional($.exit)),
+    source_file: ($) => repeat(choice($.line, $.signal, $.interleaf, $.exit)),
     line: ($) =>
       seq(
+        optional($.pid),
         $.syscall,
         $.parameters,
         "=",
@@ -13,7 +14,11 @@ module.exports = grammar({
         $._newline,
       ),
 
+    // 374673 munmap(0x7f8f32639000, 1851392 <unfinished ...>
+    // 374673 <... close resumed>)             = 0
+    interleaf: $ => /.*<.*\.\.\..*>.*/,
     signal: ($) => seq("---", $.value, $.dict, "---"),
+    pid: $ => $.integer,
     syscall: () => /[a-z][a-z0-9_]*/,
     parameters: ($) =>
       seq("(", repeat(seq($.parameter, optional(","))), ")"),
@@ -104,6 +109,6 @@ module.exports = grammar({
     dictKey: () => /[a-z_][a-z_0-9]+/,
     _dictValue: ($) => choice(seq($.syscall, $.parameters), $.parameter),
 
-    exit: ($) => seq("+++", "exited", "with", $.integer, "+++"),
+    exit: ($) => seq(optional($.pid), "+++", "exited", "with", $.integer, "+++"),
   },
 });

@@ -2,41 +2,44 @@
   "name": "strace",
   "rules": {
     "source_file": {
+      "type": "REPEAT",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "line"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "signal"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "interleaf"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "exit"
+          }
+        ]
+      }
+    },
+    "line": {
       "type": "SEQ",
       "members": [
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "line"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "signal"
-              }
-            ]
-          }
-        },
         {
           "type": "CHOICE",
           "members": [
             {
               "type": "SYMBOL",
-              "name": "exit"
+              "name": "pid"
             },
             {
               "type": "BLANK"
             }
           ]
-        }
-      ]
-    },
-    "line": {
-      "type": "SEQ",
-      "members": [
+        },
         {
           "type": "SYMBOL",
           "name": "syscall"
@@ -59,6 +62,10 @@
         }
       ]
     },
+    "interleaf": {
+      "type": "PATTERN",
+      "value": ".*<.*\\.\\.\\..*>.*"
+    },
     "signal": {
       "type": "SEQ",
       "members": [
@@ -79,6 +86,10 @@
           "value": "---"
         }
       ]
+    },
+    "pid": {
+      "type": "SYMBOL",
+      "name": "integer"
     },
     "syscall": {
       "type": "PATTERN",
@@ -666,6 +677,18 @@
     "exit": {
       "type": "SEQ",
       "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "pid"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
         {
           "type": "STRING",
           "value": "+++"

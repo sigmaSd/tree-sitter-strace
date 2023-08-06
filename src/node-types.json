@@ -89,11 +89,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "integer",
+          "named": true
+        },
+        {
+          "type": "pid",
           "named": true
         }
       ]
@@ -109,6 +113,10 @@
       "types": [
         {
           "type": "parameters",
+          "named": true
+        },
+        {
+          "type": "pid",
           "named": true
         },
         {
@@ -193,6 +201,21 @@
     }
   },
   {
+    "type": "pid",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "integer",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "returnValue",
     "named": true,
     "fields": {},
@@ -248,6 +271,10 @@
       "types": [
         {
           "type": "exit",
+          "named": true
+        },
+        {
+          "type": "interleaf",
           "named": true
         },
         {
@@ -392,6 +419,10 @@
   },
   {
     "type": "integer",
+    "named": true
+  },
+  {
+    "type": "interleaf",
     "named": true
   },
   {
