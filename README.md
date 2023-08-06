@@ -4,8 +4,9 @@
 
 ```
 npm install
-npx tree-sitter generate
-npx tree-sitter test
+npm generate
+npm test
+npm test:update # to update tests when developpping
 npx tree-sitter parse examples/* --quiet --stat
 ```
 
@@ -29,11 +30,6 @@ mkdir -p ~/.config/helix/runtime/queries/strace
 ln -s ~/.config/helix/runtime/grammars/sources/strace/queries/highlights.scm  ~/.config/helix/runtime/queries/strace/highlights.scm
 hx test.strace # should work now
 ```
-
-## TODO
-
-- [ ] figure out how to make first-line-regex work
-
 
 ![image](https://github.com/sigmaSd/tree-sitter-strace/assets/22427111/de5a97b5-ad96-4057-9801-8db24a242d9d)
 ![image](https://github.com/sigmaSd/tree-sitter-strace/assets/22427111/eb2ddb87-e1ba-43f0-8273-204a834d2870)
