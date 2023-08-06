@@ -16,7 +16,7 @@ Add this to helix languages.toml
 ```toml
 [[grammar]]
 name = "strace"
-source = {git = "https://github.com/sigmaSd/tree-sitter-strace", rev = "cc7a880055836cc06846813bd5e1c55564024617"} # use latest commit
+source = {git = "https://github.com/sigmaSd/tree-sitter-strace", rev = "1dcc4c84412e9fd3d0bd3ab416964d04d80216d4"} # use latest commit
 
 [[language]]
 name = "strace"
