@@ -4,7 +4,7 @@
 
 ```
 npm install
-npx tree-sitter-cli generate
-npx tree-sitter-cli test
-npx tree-sitter-cli parse examples/* --quiet --stat
+npx tree-sitter generate
+npx tree-sitter test
+npx tree-sitter parse examples/* --quiet --stat
 ```
