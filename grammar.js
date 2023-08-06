@@ -12,18 +12,18 @@ module.exports = grammar({
         $.returnValue,
         $._newline,
       ),
-    syscall: () => /[a-zA-Z][a-zA-Z0-9_]*/,
+    syscall: () => /[a-z][a-z0-9_]*/,
     parameters: ($) =>
       seq("(", repeat(seq($.parameter, optional(","))), ")"),
 
     parameter: ($) =>
       seq(
         choice(
-          $.integer,
+          $.value,
           $.string,
           $.list,
           $.pointer,
-          $.idents,
+          $.values,
           $.dict,
           "NULL",
         ),
@@ -44,8 +44,8 @@ module.exports = grammar({
         "]",
       ),
     pointer: () => /0x[0-9a-fA-F]+/,
-    idents: ($) => seq($.ident, repeat(seq("|", $.ident))),
-    ident: () => /[a-zA-Z0-9_]+/,
+    values: ($) => seq($.value, repeat1(seq(choice("|", "*"), $.value))),
+    value: ($) => choice(/[A-Z0-9_]+/, $.integer),
     comment: () => /\/\*.*\*\//,
     _newline: () => /\r?\n/,
 
@@ -66,10 +66,11 @@ module.exports = grammar({
       ),
       optional(seq(",", "...")),
       "}"),
-    dictElem: ($) => seq($.ident, "=", $._dictValue),
-    _dictValue: ($) => $.parameter,
+    dictElem: ($) => seq($.dictKey, "=", $._dictValue),
+    dictKey: () => /[a-z_]+/,
+    _dictValue: ($) => choice(seq($.syscall, $.parameters), $.parameter),
     // TODO: dictvalue can be a syscall
-    //_dictValue: ($) => choice(seq($.syscall, $.parameters), $.parameter),
+    // _dictValue: ($) => choice($.value,$.integer,repeat(g)),
 
     exit: ($) => seq("+++", "exited", "with", $.integer, "+++"),
   },

@@ -52,7 +52,7 @@
     },
     "syscall": {
       "type": "PATTERN",
-      "value": "[a-zA-Z][a-zA-Z0-9_]*"
+      "value": "[a-z][a-z0-9_]*"
     },
     "parameters": {
       "type": "SEQ",
@@ -99,7 +99,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "integer"
+              "name": "value"
             },
             {
               "type": "SYMBOL",
@@ -115,7 +115,7 @@
             },
             {
               "type": "SYMBOL",
-              "name": "idents"
+              "name": "values"
             },
             {
               "type": "SYMBOL",
@@ -224,34 +224,52 @@
       "type": "PATTERN",
       "value": "0x[0-9a-fA-F]+"
     },
-    "idents": {
+    "values": {
       "type": "SEQ",
       "members": [
         {
           "type": "SYMBOL",
-          "name": "ident"
+          "name": "value"
         },
         {
-          "type": "REPEAT",
+          "type": "REPEAT1",
           "content": {
             "type": "SEQ",
             "members": [
               {
-                "type": "STRING",
-                "value": "|"
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": "|"
+                  },
+                  {
+                    "type": "STRING",
+                    "value": "*"
+                  }
+                ]
               },
               {
                 "type": "SYMBOL",
-                "name": "ident"
+                "name": "value"
               }
             ]
           }
         }
       ]
     },
-    "ident": {
-      "type": "PATTERN",
-      "value": "[a-zA-Z0-9_]+"
+    "value": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "[A-Z0-9_]+"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "integer"
+        }
+      ]
     },
     "comment": {
       "type": "PATTERN",
@@ -392,7 +410,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "ident"
+          "name": "dictKey"
         },
         {
           "type": "STRING",
@@ -404,9 +422,31 @@
         }
       ]
     },
+    "dictKey": {
+      "type": "PATTERN",
+      "value": "[a-z_]+"
+    },
     "_dictValue": {
-      "type": "SYMBOL",
-      "name": "parameter"
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "syscall"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "parameters"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "parameter"
+        }
+      ]
     },
     "exit": {
       "type": "SEQ",

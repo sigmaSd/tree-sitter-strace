@@ -33,7 +33,6 @@ hx test.strace # should work now
 ## TODO
 
 - [ ] figure out how to make first-line-regex work
-- [ ] the tests still have some errors (grep for ERROR)
 
 
 ![image](https://github.com/sigmaSd/tree-sitter-strace/assets/22427111/de5a97b5-ad96-4057-9801-8db24a242d9d)

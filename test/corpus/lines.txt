@@ -49,8 +49,7 @@ access("/etc/ld.so.preload", R_OK)      = 0
       (parameter
         (string))
       (parameter
-        (idents
-          (ident))))
+        (value)))
     (returnValue
       (integer))))
 
@@ -67,11 +66,13 @@ read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 s\0\0\0\0\0\0"..., 832) 
     (syscall)
     (parameters
       (parameter
-        (integer))
+        (value
+          (integer)))
       (parameter
         (string))
       (parameter
-        (integer)))
+        (value
+          (integer))))
     (returnValue
       (integer))))
 
@@ -88,24 +89,26 @@ newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=42992, ...}, AT_EMPTY_PATH) = 0
     (syscall)
     (parameters
       (parameter
-        (integer))
+        (value
+          (integer)))
       (parameter
         (string))
       (parameter
         (dict
           (dictElem
-            (ident)
+            (dictKey)
             (parameter
-              (idents
-                (ident)
-                (ident))))
+              (values
+                (value)
+                (value
+                  (integer)))))
           (dictElem
-            (ident)
+            (dictKey)
             (parameter
-              (integer)))))
+              (value
+                (integer))))))
       (parameter
-        (idents
-          (ident))))
+        (value)))
     (returnValue
       (integer))))
 
@@ -122,27 +125,29 @@ newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPT
     (syscall)
     (parameters
       (parameter
-        (integer))
+        (value
+          (integer)))
       (parameter
         (string))
       (parameter
         (dict
           (dictElem
-            (ident)
+            (dictKey)
             (parameter
-              (idents
-                (ident)
-                (ident))))
+              (values
+                (value)
+                (value
+                  (integer)))))
           (dictElem
-            (ident)
-            (parameter
-              (idents
-                (ident))))
-          (ERROR
-            (pointer)
-            (ident))))
+            (dictKey)
+            (syscall)
+            (parameters
+              (parameter
+                (pointer))
+              (parameter
+                (value
+                  (integer)))))))
       (parameter
-        (idents
-          (ident))))
+        (value)))
     (returnValue
       (integer))))

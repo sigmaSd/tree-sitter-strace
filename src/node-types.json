@@ -23,11 +23,19 @@
       "required": true,
       "types": [
         {
-          "type": "ident",
+          "type": "dictKey",
           "named": true
         },
         {
           "type": "parameter",
+          "named": true
+        },
+        {
+          "type": "parameters",
+          "named": true
+        },
+        {
+          "type": "syscall",
           "named": true
         }
       ]
@@ -48,21 +56,6 @@
       "types": [
         {
           "type": "integer",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "idents",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "ident",
           "named": true
         }
       ]
@@ -127,14 +120,6 @@
           "named": true
         },
         {
-          "type": "idents",
-          "named": true
-        },
-        {
-          "type": "integer",
-          "named": true
-        },
-        {
           "type": "list",
           "named": true
         },
@@ -144,6 +129,14 @@
         },
         {
           "type": "string",
+          "named": true
+        },
+        {
+          "type": "value",
+          "named": true
+        },
+        {
+          "type": "values",
           "named": true
         }
       ]
@@ -216,6 +209,36 @@
     "fields": {}
   },
   {
+    "type": "value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "integer",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "values",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "\"",
     "named": false
   },
@@ -225,6 +248,10 @@
   },
   {
     "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
     "named": false
   },
   {
@@ -264,16 +291,16 @@
     "named": true
   },
   {
+    "type": "dictKey",
+    "named": true
+  },
+  {
     "type": "errorName",
     "named": true
   },
   {
     "type": "exited",
     "named": false
-  },
-  {
-    "type": "ident",
-    "named": true
   },
   {
     "type": "integer",
