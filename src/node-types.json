@@ -42,6 +42,21 @@
     }
   },
   {
+    "type": "dictFn",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "dict",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "errorDescription",
     "named": true,
     "fields": {}
@@ -113,6 +128,10 @@
         },
         {
           "type": "dict",
+          "named": true
+        },
+        {
+          "type": "dictFn",
           "named": true
         },
         {
@@ -274,6 +293,10 @@
   },
   {
     "type": "=",
+    "named": false
+  },
+  {
+    "type": "=>",
     "named": false
   },
   {

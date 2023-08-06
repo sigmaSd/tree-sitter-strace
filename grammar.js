@@ -25,6 +25,7 @@ module.exports = grammar({
           $.pointer,
           $.values,
           $.dict,
+          $.dictFn,
           "NULL",
         ),
         optional($.comment),
@@ -72,6 +73,7 @@ module.exports = grammar({
     errorName: () => /[A-Z]+/,
     errorDescription: () => seq("(", /[a-zA-Z ]+/, ")"),
 
+    dictFn: $ => seq($.dict, "=>", $.dict),
     dict: ($) => seq(
       "{",
       seq(

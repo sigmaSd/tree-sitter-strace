@@ -288,3 +288,70 @@ rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
           (integer))))
     (returnValue
       (integer))))
+
+================================================================================
+dictonary function
+================================================================================
+
+clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7f186f57a990, parent_tid=0x7f186f57a990, exit_signal=0, stack=0x7f186f37a000, stack_size=0x1ff900, tls=0x7f186f57a6c0} => {parent_tid=[341492]}, 88) = 341492
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (syscall)
+    (parameters
+      (parameter
+        (dictFn
+          (dict
+            (dictElem
+              (dictKey)
+              (parameter
+                (values
+                  (value)
+                  (value)
+                  (value)
+                  (value)
+                  (value)
+                  (value)
+                  (value)
+                  (value)
+                  (value))))
+            (dictElem
+              (dictKey)
+              (parameter
+                (pointer)))
+            (dictElem
+              (dictKey)
+              (parameter
+                (pointer)))
+            (dictElem
+              (dictKey)
+              (parameter
+                (value
+                  (integer))))
+            (dictElem
+              (dictKey)
+              (parameter
+                (pointer)))
+            (dictElem
+              (dictKey)
+              (parameter
+                (pointer)))
+            (dictElem
+              (dictKey)
+              (parameter
+                (pointer))))
+          (dict
+            (dictElem
+              (dictKey)
+              (parameter
+                (list
+                  (parameter
+                    (value
+                      (integer)))))))))
+      (parameter
+        (value
+          (integer))))
+    (returnValue
+      (integer))))

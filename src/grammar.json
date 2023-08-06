@@ -122,6 +122,10 @@
               "name": "dict"
             },
             {
+              "type": "SYMBOL",
+              "name": "dictFn"
+            },
+            {
               "type": "STRING",
               "value": "NULL"
             }
@@ -411,6 +415,23 @@
         {
           "type": "STRING",
           "value": ")"
+        }
+      ]
+    },
+    "dictFn": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dict"
+        },
+        {
+          "type": "STRING",
+          "value": "=>"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dict"
         }
       ]
     },
