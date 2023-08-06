@@ -77,9 +77,7 @@ module.exports = grammar({
       "(",
       choice(
         seq("flags", $.values),
-        /[^f][a-zA-Z_ ]*/,
-        // hardcode for easy success
-        "Ioctl() ",
+        /[^fI][a-zA-Z_ ]*/,
       ),
       ")"),
 

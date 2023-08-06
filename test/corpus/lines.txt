@@ -432,3 +432,28 @@ fcntl(3, F_GETFL)                       = 0 (flags O_RDONLY)
       (errorDescription
         (values
           (value))))))
+
+================================================================================
+ioctl
+================================================================================
+
+ioctl(9, TCGETS, 0x7ffd9a3205d0)        = -1 ENOTTY (Ioctl() inappropré pour un périphérique)
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (syscall)
+    (parameters
+      (parameter
+        (values
+          (value
+            (integer))))
+      (parameter
+        (values
+          (value))))
+    (returnValue
+      (integer)
+      (errorDescription
+        (values
+          (value))))))

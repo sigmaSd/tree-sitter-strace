@@ -363,10 +363,6 @@
     "named": false
   },
   {
-    "type": "Ioctl() ",
-    "named": false
-  },
-  {
     "type": "NULL",
     "named": false
   },

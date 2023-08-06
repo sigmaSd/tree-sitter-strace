@@ -452,17 +452,13 @@
             },
             {
               "type": "PATTERN",
-              "value": "[^f][a-zA-Z_ ]*"
-            },
-            {
-              "type": "STRING",
-              "value": "Ioctl() "
+              "value": "[^fI][a-zA-Z_ ]*"
             }
           ]
         },
         {
-          "type": "STRING",
-          "value": ")"
+          "type": "PATTERN",
+          "value": "\\)\\n"
         }
       ]
     },
