@@ -1,5 +1,5 @@
 {
-  "name": "strace_output",
+  "name": "strace",
   "rules": {
     "source_file": {
       "type": "SEQ",
@@ -12,8 +12,16 @@
           }
         },
         {
-          "type": "SYMBOL",
-          "name": "exit"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "exit"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },

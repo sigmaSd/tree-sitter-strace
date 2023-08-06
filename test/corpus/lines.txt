@@ -1,0 +1,148 @@
+================================================================================
+Strace Line
+================================================================================
+
+execve("/usr/bin/ls", ["ls"], 0x7ffdcc909270 /* 84 vars */) = 0
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (syscall)
+    (parameters
+      (parameter
+        (string))
+      (parameter
+        (list
+          (string)))
+      (parameter
+        (pointer)
+        (comment)))
+    (returnValue
+      (integer))))
+
+================================================================================
+Strace Line with comments and return error
+================================================================================
+
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffdb9571610) = -1 EINVAL (Argument invalide)
+access("/etc/ld.so.preload", R_OK)      = 0
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (syscall)
+    (parameters
+      (parameter
+        (pointer)
+        (comment))
+      (parameter
+        (pointer)))
+    (returnValue
+      (integer)
+      (errorName)
+      (errorDescription)))
+  (line
+    (syscall)
+    (parameters
+      (parameter
+        (string))
+      (parameter
+        (idents
+          (ident))))
+    (returnValue
+      (integer))))
+
+================================================================================
+string with escape sequences
+================================================================================
+
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0 s\0\0\0\0\0\0"..., 832) = 832
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (syscall)
+    (parameters
+      (parameter
+        (integer))
+      (parameter
+        (string))
+      (parameter
+        (integer)))
+    (returnValue
+      (integer))))
+
+================================================================================
+dictionary
+================================================================================
+
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=42992, ...}, AT_EMPTY_PATH) = 0
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (syscall)
+    (parameters
+      (parameter
+        (integer))
+      (parameter
+        (string))
+      (parameter
+        (dict
+          (dictElem
+            (ident)
+            (parameter
+              (idents
+                (ident)
+                (ident))))
+          (dictElem
+            (ident)
+            (parameter
+              (integer)))))
+      (parameter
+        (idents
+          (ident))))
+    (returnValue
+      (integer))))
+
+================================================================================
+dictonary element contains a syscall
+================================================================================
+
+newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPTY_PATH) = 0
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (syscall)
+    (parameters
+      (parameter
+        (integer))
+      (parameter
+        (string))
+      (parameter
+        (dict
+          (dictElem
+            (ident)
+            (parameter
+              (idents
+                (ident)
+                (ident))))
+          (dictElem
+            (ident)
+            (parameter
+              (idents
+                (ident))))
+          (ERROR
+            (pointer)
+            (ident))))
+      (parameter
+        (idents
+          (ident))))
+    (returnValue
+      (integer))))
