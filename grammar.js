@@ -85,9 +85,6 @@ module.exports = grammar({
     dictElem: ($) => seq($.dictKey, "=", $._dictValue),
     dictKey: () => /[a-z_][a-z_0-9]+/,
     _dictValue: ($) => choice(seq($.syscall, $.parameters), $.parameter),
-    // TODO: dictvalue can be a syscall
-    // _dictValue: ($) => choice($.value,$.integer,repeat(g)),
-    // array: ($) => seq('[', repeat(seq($.dict, optional(','))), ']'),
 
     exit: ($) => seq("+++", "exited", "with", $.integer, "+++"),
   },
