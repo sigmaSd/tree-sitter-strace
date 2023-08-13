@@ -89,15 +89,11 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
           "type": "integer",
-          "named": true
-        },
-        {
-          "type": "pid",
           "named": true
         }
       ]
@@ -113,10 +109,6 @@
       "types": [
         {
           "type": "parameters",
-          "named": true
-        },
-        {
-          "type": "pid",
           "named": true
         },
         {
@@ -275,6 +267,10 @@
         },
         {
           "type": "line",
+          "named": true
+        },
+        {
+          "type": "pid",
           "named": true
         },
         {

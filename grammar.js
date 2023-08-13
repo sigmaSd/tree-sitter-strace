@@ -3,10 +3,9 @@
 module.exports = grammar({
   name: "strace",
   rules: {
-    source_file: ($) => repeat(choice($.line, $.signal, $.exit)),
+    source_file: ($) => repeat(seq(optional($.pid), choice($.line, $.signal, $.exit))),
     line: ($) =>
       seq(
-        optional($.pid),
         choice(
           $.syscall,
           seq("<...", $.syscall, "resumed>", optional("=>"), optional(","))
@@ -105,6 +104,6 @@ module.exports = grammar({
     dictKey: () => /[a-z_][a-z_0-9]+/,
     _dictValue: ($) => choice(seq($.syscall, $.parameters), $.parameter),
 
-    exit: ($) => seq(optional($.pid), "+++", "exited", "with", $.integer, "+++"),
+    exit: ($) => seq("+++", "exited", "with", $.integer, "+++"),
   },
 });
