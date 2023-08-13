@@ -18,4 +18,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: latest
+      - run: npm install
       - run: npm test
