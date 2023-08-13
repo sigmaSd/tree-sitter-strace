@@ -3,25 +3,26 @@
 module.exports = grammar({
   name: "strace",
   rules: {
-    source_file: ($) => repeat(choice($.line, $.signal, $.interleaf, $.exit)),
+    source_file: ($) => repeat(choice($.line, $.signal, $.resumed, $.exit)),
     line: ($) =>
       seq(
         optional($.pid),
         $.syscall,
         $.parameters,
-        "=",
-        $.returnValue,
-        $._newline,
-      ),
+        optional(
+          seq(
+            "=",
+            $.returnValue,
+            $._newline),
+        )),
 
-    // 374673 munmap(0x7f8f32639000, 1851392 <unfinished ...>
     // 374673 <... close resumed>)             = 0
-    interleaf: $ => seq($.pid, /.*<.*\.\.\..*>.*/),
+    resumed: $ => seq($.pid, /.*<.*\.\.\..*resumed.*>.*/),
     signal: ($) => seq("---", $.value, $.dict, "---"),
     pid: $ => $.integer,
     syscall: () => /[a-z][a-z0-9_]*/,
     parameters: ($) =>
-      seq("(", repeat(seq($.parameter, optional(","))), ")"),
+      seq("(", repeat(seq($.parameter, optional(","),)), choice("<unfinished ...>", ")")),
 
     parameter: ($) =>
       seq(

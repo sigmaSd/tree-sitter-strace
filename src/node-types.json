@@ -104,21 +104,6 @@
     }
   },
   {
-    "type": "interleaf",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "pid",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "line",
     "named": true,
     "fields": {},
@@ -231,6 +216,21 @@
     }
   },
   {
+    "type": "resumed",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "pid",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "returnValue",
     "named": true,
     "fields": {},
@@ -289,11 +289,11 @@
           "named": true
         },
         {
-          "type": "interleaf",
+          "type": "line",
           "named": true
         },
         {
-          "type": "line",
+          "type": "resumed",
           "named": true
         },
         {
@@ -386,6 +386,10 @@
   },
   {
     "type": "...",
+    "named": false
+  },
+  {
+    "type": "<unfinished ...>",
     "named": false
   },
   {
