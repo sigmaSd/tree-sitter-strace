@@ -1,490 +1,1007 @@
-execve("/home/mrcool/.deno/bin/deno", ["deno", "eval", "console.log(4)"], 0x7ffeb0b82f90 /* 82 vars */) = 0
-brk(NULL)                               = 0x558a8e193000
-arch_prctl(0x3001 /* ARCH_??? */, 0x7ffe168581d0) = -1 EINVAL (Argument invalide)
-access("/etc/ld.so.preload", R_OK)      = 0
-openat(AT_FDCWD, "/etc/ld.so.preload", O_RDONLY|O_CLOEXEC) = 3
-newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=0, ...}, AT_EMPTY_PATH) = 0
-close(3)                                = 0
-openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
-newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=281835, ...}, AT_EMPTY_PATH) = 0
-mmap(NULL, 281835, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f3156581000
-close(3)                                = 0
-openat(AT_FDCWD, "/usr/lib/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
-read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
-newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=14416, ...}, AT_EMPTY_PATH) = 0
-mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f315657f000
-mmap(NULL, 16400, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f315657a000
-mmap(0x7f315657b000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f315657b000
-mmap(0x7f315657c000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f315657c000
-mmap(0x7f315657d000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f315657d000
-close(3)                                = 0
-openat(AT_FDCWD, "/usr/lib/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
-read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
-newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=728128, ...}, AT_EMPTY_PATH) = 0
-mmap(NULL, 147912, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f3156555000
-mmap(0x7f3156559000, 110592, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7f3156559000
-mmap(0x7f3156574000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f000) = 0x7f3156574000
-mmap(0x7f3156578000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7f3156578000
-close(3)                                = 0
-openat(AT_FDCWD, "/usr/lib/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
-read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
-newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=14424, ...}, AT_EMPTY_PATH) = 0
-mmap(NULL, 16400, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f3156550000
-mmap(0x7f3156551000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f3156551000
-mmap(0x7f3156552000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f3156552000
-mmap(0x7f3156553000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f3156553000
-close(3)                                = 0
-openat(AT_FDCWD, "/usr/lib/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
-read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
-newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=965088, ...}, AT_EMPTY_PATH) = 0
-mmap(NULL, 966952, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f3156463000
-mmap(0x7f3156471000, 520192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000) = 0x7f3156471000
-mmap(0x7f31564f0000, 385024, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8d000) = 0x7f31564f0000
-mmap(0x7f315654e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xea000) = 0x7f315654e000
-close(3)                                = 0
-openat(AT_FDCWD, "/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
-read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\20:\2\0\0\0\0\0"..., 832) = 832
-pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
-newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=1961632, ...}, AT_EMPTY_PATH) = 0
-pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
-mmap(NULL, 2006640, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f3156279000
-mmap(0x7f315629b000, 1429504, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7f315629b000
-mmap(0x7f31563f8000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17f000) = 0x7f31563f8000
-mmap(0x7f3156450000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1d6000) = 0x7f3156450000
-mmap(0x7f3156456000, 52848, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f3156456000
-close(3)                                = 0
-mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f3156277000
-mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f3156274000
-arch_prctl(ARCH_SET_FS, 0x7f3156274e80) = 0
-set_tid_address(0x7f3156275150)         = 31334
-set_robust_list(0x7f3156275160, 24)     = 0
-rseq(0x7f31562757a0, 0x20, 0, 0x53053053) = 0
-mprotect(0x7f3156450000, 16384, PROT_READ) = 0
-mprotect(0x7f315654e000, 4096, PROT_READ) = 0
-mprotect(0x7f3156553000, 4096, PROT_READ) = 0
-mprotect(0x7f3156578000, 4096, PROT_READ) = 0
-mprotect(0x7f315657d000, 4096, PROT_READ) = 0
-mprotect(0x558a8d09b000, 1630208, PROT_READ) = 0
-mprotect(0x7f31565f7000, 8192, PROT_READ) = 0
-prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
-munmap(0x7f3156581000, 281835)          = 0
-gettid()                                = 31334
-gettid()                                = 31334
-gettid()                                = 31334
-gettid()                                = 31334
-poll([{fd=0, events=0}, {fd=1, events=0}, {fd=2, events=0}], 3, 0) = 0 (Timeout)
-rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[PIPE], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f31562b2ab0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
-rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
-rt_sigaction(SIGSEGV, {sa_handler=0x558a8b97d130, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7f31562b2ab0}, NULL, 8) = 0
-rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
-rt_sigaction(SIGBUS, {sa_handler=0x558a8b97d130, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7f31562b2ab0}, NULL, 8) = 0
-sigaltstack(NULL, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
-mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f31565c3000
-mprotect(0x7f31565c3000, 4096, PROT_NONE) = 0
-sigaltstack({ss_sp=0x7f31565c4000, ss_flags=0, ss_size=8192}, NULL) = 0
-getrandom("\x18\x64\x15\x73\x5d\xd4\xda\xe5", 8, GRND_NONBLOCK) = 8
-brk(NULL)                               = 0x558a8e193000
-brk(0x558a8e1b4000)                     = 0x558a8e1b4000
-openat(AT_FDCWD, "/proc/self/maps", O_RDONLY|O_CLOEXEC) = 3
-prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
-newfstatat(3, "", {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
-read(3, "558a8850e000-558a8a909000 r--p 0"..., 1024) = 1024
-read(3, "usr/lib/libc.so.6\n7f3156456000-7"..., 1024) = 1024
-read(3, "55000-7f3156559000 r--p 00000000"..., 1024) = 1024
-read(3, "00 00:00 0 \n7f31565c4000-7f31565"..., 1024) = 901
-close(3)                                = 0
-sched_getaffinity(31334, 32, [0 1 2 3]) = 8
-prlimit64(0, RLIMIT_NOFILE, NULL, {rlim_cur=1024*1024, rlim_max=1024*1024}) = 0
-getrandom("\x5e\x96\x9c\x01\xa3\x34\xba\x31\x0b\x10\x2c\x05\xd2\xb0\xba\xd3", 16, GRND_INSECURE) = 16
-epoll_create1(EPOLL_CLOEXEC)            = 3
-eventfd2(0, EFD_CLOEXEC|EFD_NONBLOCK)   = 4
-epoll_ctl(3, EPOLL_CTL_ADD, 4, {events=EPOLLIN|EPOLLRDHUP|EPOLLET, data={u32=2147483648, u64=2147483648}}) = 0
-fcntl(3, F_DUPFD_CLOEXEC, 3)            = 5
-socketpair(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0, [6, 7]) = 0
-fcntl(6, F_DUPFD_CLOEXEC, 3)            = 8
-epoll_ctl(5, EPOLL_CTL_ADD, 8, {events=EPOLLIN|EPOLLRDHUP|EPOLLET, data={u32=2147483649, u64=2147483649}}) = 0
-write(4, "\1\0\0\0\0\0\0\0", 8)         = 8
-readlink("/proc/self/exe", "/home/mrcool/.deno/bin/deno", 256) = 27
-openat(AT_FDCWD, "/home/mrcool/.deno/bin/deno", O_RDONLY|O_CLOEXEC) = 9
-lseek(9, -40, SEEK_END)                 = 114274160
-read(9, "\261\v\314\5\0\0\0\0\244\227\3\1\0\0\0\0\0\0\0\0\0\0\0\0\1\0\0\0\0\0\0\0"..., 8192) = 40
-close(9)                                = 0
-brk(0x558a8e1da000)                     = 0x558a8e1da000
-ioctl(2, TCGETS, {c_iflag=ICRNL, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
-getcwd("/home/mrcool/dev/tree-sitter/tree-sitter-strace", 512) = 48
-openat(AT_FDCWD, "/home/mrcool/dev/tree-sitter/tree-sitter-strace/deno.json", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
-openat(AT_FDCWD, "/home/mrcool/dev/tree-sitter/tree-sitter-strace/deno.jsonc", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
-openat(AT_FDCWD, "/home/mrcool/dev/tree-sitter/deno.json", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
-openat(AT_FDCWD, "/home/mrcool/dev/tree-sitter/deno.jsonc", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
-openat(AT_FDCWD, "/home/mrcool/dev/deno.json", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
-openat(AT_FDCWD, "/home/mrcool/dev/deno.jsonc", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
-openat(AT_FDCWD, "/home/mrcool/deno.json", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
-openat(AT_FDCWD, "/home/mrcool/deno.jsonc", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
-openat(AT_FDCWD, "/home/deno.json", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
-openat(AT_FDCWD, "/home/deno.jsonc", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
-openat(AT_FDCWD, "/deno.json", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
-openat(AT_FDCWD, "/deno.jsonc", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
-getcwd("/home/mrcool/dev/tree-sitter/tree-sitter-strace", 512) = 48
-openat(AT_FDCWD, "/home/mrcool/dev/tree-sitter/tree-sitter-strace/package.json", O_RDONLY|O_CLOEXEC) = 9
-statx(9, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=677, ...}) = 0
-read(9, "{\n  \"name\": \"tree-sitter-strace\""..., 677) = 677
-read(9, "", 32)                         = 0
-close(9)                                = 0
-readlink("/home", 0x7ffe1682da30, 1023) = -1 EINVAL (Argument invalide)
-readlink("/home/mrcool", 0x7ffe1682da30, 1023) = -1 EINVAL (Argument invalide)
-readlink("/home/mrcool/dev", 0x7ffe1682da30, 1023) = -1 EINVAL (Argument invalide)
-readlink("/home/mrcool/dev/tree-sitter", 0x7ffe1682da30, 1023) = -1 EINVAL (Argument invalide)
-readlink("/home/mrcool/dev/tree-sitter/tree-sitter-strace", 0x7ffe1682da30, 1023) = -1 EINVAL (Argument invalide)
-readlink("/home/mrcool/dev/tree-sitter/tree-sitter-strace/node_modules", 0x7ffe1682da30, 1023) = -1 EINVAL (Argument invalide)
-statx(AT_FDCWD, "/home/mrcool/.cache/deno/npm", AT_STATX_SYNC_AS_STAT, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFDIR|0755, stx_size=4096, ...}) = 0
-readlink("/home", 0x7ffe1682efd0, 1023) = -1 EINVAL (Argument invalide)
-readlink("/home/mrcool", 0x7ffe1682efd0, 1023) = -1 EINVAL (Argument invalide)
-readlink("/home/mrcool/.cache", 0x7ffe1682efd0, 1023) = -1 EINVAL (Argument invalide)
-readlink("/home/mrcool/.cache/deno", 0x7ffe1682efd0, 1023) = -1 EINVAL (Argument invalide)
-readlink("/home/mrcool/.cache/deno/npm", 0x7ffe1682efd0, 1023) = -1 EINVAL (Argument invalide)
-rt_sigaction(SIGRT_1, {sa_handler=0x7f31562fd770, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f31562b2ab0}, NULL, 8) = 0
-rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
-mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f3156073000
-mprotect(0x7f3156074000, 2097152, PROT_READ|PROT_WRITE) = 0
-rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
-clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7f3156273990, parent_tid=0x7f3156273990, exit_signal=0, stack=0x7f3156073000, stack_size=0x1ff840, tls=0x7f31562736c0} => {parent_tid=[31335]}, 88) = 31335
-rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
-futex(0x7f3156273688, FUTEX_WAKE_PRIVATE, 1) = 1
-mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f3155e72000
-mprotect(0x7f3155e73000, 2097152, PROT_READ|PROT_WRITE) = 0
-rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
-clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7f3156072990, parent_tid=0x7f3156072990, exit_signal=0, stack=0x7f3155e72000, stack_size=0x1ff840, tls=0x7f31560726c0} => {parent_tid=[31336]}, 88) = 31336
-rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
-futex(0x7f3156273688, FUTEX_WAKE_PRIVATE, 1) = 1
-openat(AT_FDCWD, "/proc/self/cgroup", O_RDONLY|O_CLOEXEC) = 11
-statx(11, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0444, stx_size=0, ...}) = 0
-lseek(11, 0, SEEK_CUR)                  = 0
-read(11, "0::/user.slice/user-1002.slice/u"..., 128) = 89
-read(11, "", 39)                        = 0
-close(11)                               = 0
-statx(AT_FDCWD, "/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/app.slice/app-gnome-wezterm-28525.scope/cgroup.controllers", AT_STATX_SYNC_AS_STAT, STATX_ALL, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0444, stx_size=0, ...}) = 0
-openat(AT_FDCWD, "/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/app.slice/app-gnome-wezterm-28525.scope/cpu.max", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
-openat(AT_FDCWD, "/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/app.slice/cpu.max", O_RDONLY|O_CLOEXEC) = 11
-statx(11, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=0, ...}) = 0
-lseek(11, 0, SEEK_CUR)                  = 0
-read(11, "max 100000\n", 20)            = 11
-read(11, "", 9)                         = 0
-close(11)                               = 0
-openat(AT_FDCWD, "/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/cpu.max", O_RDONLY|O_CLOEXEC) = 11
-statx(11, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=0, ...}) = 0
-lseek(11, 0, SEEK_CUR)                  = 0
-read(11, "max 100000\n", 20)            = 11
-read(11, "", 9)                         = 0
-close(11)                               = 0
-openat(AT_FDCWD, "/sys/fs/cgroup/user.slice/user-1002.slice/cpu.max", O_RDONLY|O_CLOEXEC) = 11
-statx(11, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=0, ...}) = 0
-lseek(11, 0, SEEK_CUR)                  = 0
-read(11, "max 100000\n", 20)            = 11
-read(11, "", 9)                         = 0
-close(11)                               = 0
-openat(AT_FDCWD, "/sys/fs/cgroup/user.slice/cpu.max", O_RDONLY|O_CLOEXEC) = 11
-statx(11, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL, {stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=0, ...}) = 0
-lseek(11, 0, SEEK_CUR)                  = 0
-read(11, "max 100000\n", 20)            = 11
-read(11, "", 9)                         = 0
-close(11)                               = 0
-openat(AT_FDCWD, "/sys/fs/cgroup/cpu.max", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
-sched_getaffinity(0, 128, [0 1 2 3])    = 8
-ioctl(1, TCGETS, {c_iflag=ICRNL, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
-openat(AT_FDCWD, "/sys/devices/system/cpu/online", O_RDONLY|O_CLOEXEC) = 11
-read(11, "0-3\n", 1024)                 = 4
-close(11)                               = 0
-gettid()                                = 31334
-gettid()                                = 31334
-uname({sysname="Linux", nodename="mrcool", ...}) = 0
-pkey_alloc(0, PKEY_DISABLE_WRITE)       = -1 EINVAL (Argument invalide)
-mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f315541b000
-mprotect(0x7f315541c000, 8388608, PROT_READ|PROT_WRITE) = 0
-rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
-clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7f3155c1b990, parent_tid=0x7f3155c1b990, exit_signal=0, stack=0x7f315541b000, stack_size=0x7ff840, tls=0x7f3155c1b6c0} => {parent_tid=[31337]}, 88) = 31337
-rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
-futex(0x558a8e1ce538, FUTEX_WAKE_PRIVATE, 1) = 1
-mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f3154c1a000
-mprotect(0x7f3154c1b000, 8388608, PROT_READ|PROT_WRITE) = 0
-rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
-clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7f315541a990, parent_tid=0x7f315541a990, exit_signal=0, stack=0x7f3154c1a000, stack_size=0x7ff840, tls=0x7f315541a6c0} => {parent_tid=[31338]}, 88) = 31338
-rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
-futex(0x558a8e1cf358, FUTEX_WAKE_PRIVATE, 1) = 1
-mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f3154419000
-mprotect(0x7f315441a000, 8388608, PROT_READ|PROT_WRITE) = 0
-rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
-clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7f3154c19990, parent_tid=0x7f3154c19990, exit_signal=0, stack=0x7f3154419000, stack_size=0x7ff840, tls=0x7f3154c196c0} => {parent_tid=[31339]}, 88) = 31339
-rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
-futex(0x558a8e1cf528, FUTEX_WAKE_PRIVATE, 1) = 1
-mprotect(0x558a8d232000, 4096, PROT_READ) = 0
-gettid()                                = 31334
-gettid()                                = 31334
-brk(0x558a8e1fe000)                     = 0x558a8e1fe000
-fcntl(0, F_DUPFD_CLOEXEC, 3)            = 11
-fcntl(1, F_DUPFD_CLOEXEC, 3)            = 12
-fcntl(2, F_DUPFD_CLOEXEC, 3)            = 13
-brk(0x558a8e221000)                     = 0x558a8e221000
-openat(AT_FDCWD, "/proc/self/maps", O_RDONLY|O_CLOEXEC) = 14
-prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
-newfstatat(14, "", {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
-read(14, "558a8850e000-558a8a909000 r--p 0"..., 1024) = 1024
-read(14, "0 0 \n7f3154c1a000-7f3154c1b000 -"..., 1024) = 1024
-read(14, "6456000 rw-p 001da000 08:01 4853"..., 1024) = 1024
-read(14, "3241                    /usr/lib"..., 1024) = 1024
-read(14, " 00000000 00:00 0 \n7f31565bd000-"..., 1024) = 1024
-close(14)                               = 0
-sched_getaffinity(31334, 32, [0 1 2 3]) = 8
-brk(0x558a8e244000)                     = 0x558a8e244000
-getpid()                                = 31334
-gettid()                                = 31334
-openat(AT_FDCWD, "/dev/urandom", O_RDONLY) = 14
-newfstatat(14, "", {st_mode=S_IFCHR|0666, st_rdev=makedev(0x1, 0x9), ...}, AT_EMPTY_PATH) = 0
-ioctl(14, TCGETS, 0x7ffe1682dd40)       = -1 EINVAL (Argument invalide)
-read(14, "\271=\235\272\2238=\252t\177Y\4\366?1(vk-31[lo^\f+\354\373\357\364g"..., 4096) = 4096
-close(14)                               = 0
-gettid()                                = 31334
-openat(AT_FDCWD, "/proc/self/maps", O_RDONLY) = 14
-newfstatat(14, "", {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
-read(14, "558a8850e000-558a8a909000 r--p 0"..., 1024) = 1024
-close(14)                               = 0
-mmap(0x558a0b940000, 537128960, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x558a0b940000
-munmap(0x558a2b940000, 258048)          = 0
-mmap(0xe49e7f00000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0xe49e7f00000
-munmap(0xe49e7f40000, 258048)           = 0
-mprotect(0xe49e7f00000, 262144, PROT_READ|PROT_WRITE) = 0
-munmap(0xe49e7f10000, 196608)           = 0
-mprotect(0xe49e7f00000, 65536, PROT_READ) = 0
-mmap(0x2b3f963c0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x2b3f963c0000
-munmap(0x2b3f96400000, 258048)          = 0
-mprotect(0x2b3f963c0000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0x6000c580000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x6000c580000
-munmap(0x6000c5c0000, 258048)           = 0
-mprotect(0x6000c580000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0x215d96bc0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x215d96bc0000
-munmap(0x215d96c00000, 258048)          = 0
-mprotect(0x215d96bc0000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0x4ed6ac80000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x4ed6ac80000
-munmap(0x4ed6acc0000, 258048)           = 0
-mprotect(0x4ed6ac80000, 262144, PROT_READ|PROT_WRITE) = 0
-openat(AT_FDCWD, "/dev/urandom", O_RDONLY) = 14
-newfstatat(14, "", {st_mode=S_IFCHR|0666, st_rdev=makedev(0x1, 0x9), ...}, AT_EMPTY_PATH) = 0
-ioctl(14, TCGETS, 0x7ffe1682dd70)       = -1 EINVAL (Argument invalide)
-read(14, "\"\221\362by\356\320\337)\374\224\371\311\230i\231\211\364\30\23\304M\351\323\302\353\22\210\250\223,+"..., 4096) = 4096
-close(14)                               = 0
-mmap(0x2ab233ac0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x2ab233ac0000
-munmap(0x2ab233b00000, 258048)          = 0
-mprotect(0x2ab233ac0000, 262144, PROT_READ|PROT_WRITE) = 0
-brk(0x558a8e265000)                     = 0x558a8e265000
-brk(0x558a8e294000)                     = 0x558a8e294000
-mmap(0x3aa6a4cc0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x3aa6a4cc0000
-munmap(0x3aa6a4d00000, 258048)          = 0
-mprotect(0x3aa6a4cc0000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(NULL, 135168, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f315659c000
-mmap(NULL, 135168, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f31543f8000
-brk(0x558a8e276000)                     = 0x558a8e276000
-mmap(NULL, 135168, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f31543d7000
-mmap(0x393c28f80000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x393c28f80000
-munmap(0x393c28fc0000, 258048)          = 0
-mprotect(0x393c28f80000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0xd20be400000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0xd20be400000
-munmap(0xd20be440000, 258048)           = 0
-mprotect(0xd20be400000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0x3040baf40000, 450560, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x3040baf40000
-munmap(0x3040baf6f000, 258048)          = 0
-mprotect(0x3040baf40000, 192512, PROT_READ|PROT_WRITE) = 0
-mmap(0x360b4f500000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x360b4f500000
-munmap(0x360b4f540000, 258048)          = 0
-mprotect(0x360b4f500000, 262144, PROT_READ|PROT_WRITE) = 0
-brk(0x558a8e2a6000)                     = 0x558a8e2a6000
-mmap(0x44dabf80000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x44dabf80000
-munmap(0x44dabfc0000, 258048)           = 0
-mprotect(0x44dabf80000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0x13af48200000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x13af48200000
-munmap(0x13af48240000, 258048)          = 0
-mprotect(0x13af48200000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0x3166a3b40000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x3166a3b40000
-munmap(0x3166a3b80000, 258048)          = 0
-mprotect(0x3166a3b40000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0x17c15ab80000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x17c15ab80000
-munmap(0x17c15abc0000, 258048)          = 0
-mprotect(0x17c15ab80000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0x26e9632c0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x26e9632c0000
-munmap(0x26e963300000, 258048)          = 0
-mprotect(0x26e9632c0000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0xda58c980000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0xda58c980000
-munmap(0xda58c9c0000, 258048)           = 0
-mprotect(0xda58c980000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0x1644e9980000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x1644e9980000
-munmap(0x1644e99c0000, 258048)          = 0
-mprotect(0x1644e9980000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0xf56eed80000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0xf56eed80000
-munmap(0xf56eedc0000, 258048)           = 0
-mprotect(0xf56eed80000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(NULL, 266240, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f3154396000
-brk(0x558a8e2a4000)                     = 0x558a8e2a4000
-mmap(0x207463400000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x207463400000
-munmap(0x207463440000, 258048)          = 0
-mprotect(0x207463400000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0x1cef11d00000, 454656, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x1cef11d00000
-munmap(0x1cef11d30000, 258048)          = 0
-mprotect(0x1cef11d00000, 196608, PROT_READ|PROT_WRITE) = 0
-mmap(0x203e1eb80000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x203e1eb80000
-munmap(0x203e1ebc0000, 258048)          = 0
-mprotect(0x203e1eb80000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0xf44dba00000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0xf44dba00000
-munmap(0xf44dba40000, 258048)           = 0
-mprotect(0xf44dba00000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0xe381cd40000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0xe381cd40000
-munmap(0xe381cd80000, 258048)           = 0
-mprotect(0xe381cd40000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0x3ce3bc6c0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x3ce3bc6c0000
-munmap(0x3ce3bc700000, 258048)          = 0
-mprotect(0x3ce3bc6c0000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0x38d17a9c0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x38d17a9c0000
-munmap(0x38d17aa00000, 258048)          = 0
-mprotect(0x38d17a9c0000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0x1cf1978c0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x1cf1978c0000
-munmap(0x1cf197900000, 258048)          = 0
-mprotect(0x1cf1978c0000, 262144, PROT_READ|PROT_WRITE) = 0
-brk(0x558a8e2c6000)                     = 0x558a8e2c6000
-mmap(0x1b68249c0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x1b68249c0000
-munmap(0x1b6824a00000, 258048)          = 0
-mprotect(0x1b68249c0000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(NULL, 528384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f3154315000
-munmap(0x7f3154396000, 266240)          = 0
-mmap(0x36f056780000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x36f056780000
-munmap(0x36f0567c0000, 258048)          = 0
-mprotect(0x36f056780000, 262144, PROT_READ|PROT_WRITE) = 0
-brk(0x558a8e306000)                     = 0x558a8e306000
-munmap(0x7f3154315000, 528384)          = 0
-munmap(0x7f31543f8000, 135168)          = 0
-munmap(0x36f0567a0000, 131072)          = 0
-mmap(0x5c8ceb80000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x5c8ceb80000
-munmap(0x5c8cebc0000, 258048)           = 0
-mprotect(0x5c8ceb80000, 262144, PROT_READ|PROT_WRITE) = 0
-openat(AT_FDCWD, "/dev/urandom", O_RDONLY) = 14
-newfstatat(14, "", {st_mode=S_IFCHR|0666, st_rdev=makedev(0x1, 0x9), ...}, AT_EMPTY_PATH) = 0
-ioctl(14, TCGETS, 0x7ffe1682e4f0)       = -1 EINVAL (Argument invalide)
-read(14, ",\350\260\35\262|-G\25Cc\247\345\326gg\362\30\351LO\303\312\214\24\217\337\351J\212\337\16"..., 4096) = 4096
-close(14)                               = 0
-mmap(0x3f93c1fc0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x3f93c1fc0000
-munmap(0x3f93c2000000, 258048)          = 0
-mprotect(0x3f93c1fc0000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0x12e5168c0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x12e5168c0000
-munmap(0x12e516900000, 258048)          = 0
-mprotect(0x12e5168c0000, 262144, PROT_READ|PROT_WRITE) = 0
-brk(0x558a8e346000)                     = 0x558a8e346000
-mmap(0x2ef739980000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x2ef739980000
-munmap(0x2ef7399c0000, 258048)          = 0
-mprotect(0x2ef739980000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0x2967742c0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x2967742c0000
-munmap(0x296774300000, 258048)          = 0
-mprotect(0x2967742c0000, 262144, PROT_READ|PROT_WRITE) = 0
-brk(0x558a8e386000)                     = 0x558a8e386000
-mmap(0x2449ec980000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x2449ec980000
-munmap(0x2449ec9c0000, 258048)          = 0
-mprotect(0x2449ec980000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0x2f3a8da00000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x2f3a8da00000
-munmap(0x2f3a8da40000, 258048)          = 0
-mprotect(0x2f3a8da00000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0xdfa5d900000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0xdfa5d900000
-munmap(0xdfa5d940000, 258048)           = 0
-mprotect(0xdfa5d900000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0x2e9316a00000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x2e9316a00000
-munmap(0x2e9316a40000, 258048)          = 0
-mprotect(0x2e9316a00000, 262144, PROT_READ|PROT_WRITE) = 0
-mmap(0x3541919c0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x3541919c0000
-munmap(0x354191a00000, 258048)          = 0
-mprotect(0x3541919c0000, 262144, PROT_READ|PROT_WRITE) = 0
-brk(0x558a8e406000)                     = 0x558a8e406000
-brk(0x558a8e324000)                     = 0x558a8e324000
-mmap(0x3fe481b00000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x3fe481b00000
-munmap(0x3fe481b40000, 258048)          = 0
-mprotect(0x3fe481b00000, 262144, PROT_READ|PROT_WRITE) = 0
-getpid()                                = 31334
-getcwd("/home/mrcool/dev/tree-sitter/tree-sitter-strace", 512) = 48
-getcwd("/home/mrcool/dev/tree-sitter/tree-sitter-strace", 512) = 48
-fcntl(9, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
-fcntl(9, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
-fcntl(9, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
-stat("/home/mrcool/.cache/deno/dep_analysis_cache_v1-journal", {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
-stat("/home/mrcool/.cache/deno/dep_analysis_cache_v1-wal", 0x7ffe1682e670) = -1 ENOENT (Aucun fichier ou dossier de ce type)
-fstat(9, {st_mode=S_IFREG|0644, st_size=1851392, ...}) = 0
-fcntl(9, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
-getcwd("/home/mrcool/dev/tree-sitter/tree-sitter-strace", 512) = 48
-mmap(0x2f72f140000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x2f72f140000
-munmap(0x2f72f180000, 258048)           = 0
-mprotect(0x2f72f140000, 262144, PROT_READ|PROT_WRITE) = 0
-write(1, "\33[33m4\33[39m\n", 12)       = 12
-futex(0x558a8e1ce490, FUTEX_WAKE_PRIVATE, 1) = 1
-close(11)                               = 0
-close(12)                               = 0
-close(13)                               = 0
-munmap(0x7f31543d7000, 135168)          = 0
-gettid()                                = 31334
-munmap(0x2ab233ac0000, 262144)          = 0
-munmap(0x3aa6a4cc0000, 262144)          = 0
-munmap(0x393c28f80000, 262144)          = 0
-munmap(0xd20be400000, 262144)           = 0
-munmap(0x360b4f500000, 262144)          = 0
-munmap(0x44dabf80000, 262144)           = 0
-munmap(0x13af48200000, 262144)          = 0
-munmap(0x3166a3b40000, 262144)          = 0
-munmap(0x17c15ab80000, 262144)          = 0
-munmap(0x26e9632c0000, 262144)          = 0
-munmap(0xda58c980000, 262144)           = 0
-munmap(0x1644e9980000, 262144)          = 0
-munmap(0xf56eed80000, 262144)           = 0
-munmap(0x207463400000, 262144)          = 0
-munmap(0x203e1eb80000, 262144)          = 0
-munmap(0xf44dba00000, 262144)           = 0
-munmap(0xe381cd40000, 262144)           = 0
-munmap(0x3ce3bc6c0000, 262144)          = 0
-munmap(0x38d17a9c0000, 262144)          = 0
-munmap(0x1cf1978c0000, 262144)          = 0
-munmap(0x1b68249c0000, 262144)          = 0
-munmap(0x36f056780000, 131072)          = 0
-munmap(0x5c8ceb80000, 262144)           = 0
-munmap(0x3f93c1fc0000, 262144)          = 0
-munmap(0x12e5168c0000, 262144)          = 0
-munmap(0x2ef739980000, 262144)          = 0
-munmap(0x2967742c0000, 262144)          = 0
-munmap(0x2449ec980000, 262144)          = 0
-munmap(0x2f3a8da00000, 262144)          = 0
-munmap(0xdfa5d900000, 262144)           = 0
-munmap(0x2e9316a00000, 262144)          = 0
-munmap(0x3541919c0000, 262144)          = 0
-munmap(0x3fe481b00000, 262144)          = 0
-munmap(0x2f72f140000, 262144)           = 0
-munmap(0x3631be000000, 262144)          = 0
-mprotect(0x558a0b940000, 262144, PROT_NONE) = 0
-madvise(0x558a0b940000, 262144, MADV_DONTNEED) = 0
-munmap(0x3040baf40000, 192512)          = 0
-munmap(0x1cef11d00000, 196608)          = 0
-munmap(0xe49e7f00000, 65536)            = 0
-mprotect(0x4ed6ac80000, 262144, PROT_NONE) = 0
-madvise(0x4ed6ac80000, 262144, MADV_DONTNEED) = 0
-mprotect(0x215d96bc0000, 262144, PROT_NONE) = 0
-madvise(0x215d96bc0000, 262144, MADV_DONTNEED) = 0
-mprotect(0x6000c580000, 262144, PROT_NONE) = 0
-madvise(0x6000c580000, 262144, MADV_DONTNEED) = 0
-mprotect(0x2b3f963c0000, 262144, PROT_NONE) = 0
-madvise(0x2b3f963c0000, 262144, MADV_DONTNEED) = 0
-munmap(0x2b3f963c0000, 262144)          = 0
-munmap(0x6000c580000, 262144)           = 0
-munmap(0x215d96bc0000, 262144)          = 0
-munmap(0x4ed6ac80000, 262144)           = 0
-munmap(0x7f315659c000, 135168)          = 0
-munmap(0x558a0b940000, 536870912)       = 0
-futex(0x7f3156072688, FUTEX_WAKE_PRIVATE, 1) = 1
-futex(0x7f3156273688, FUTEX_WAKE_PRIVATE, 1) = 1
-write(4, "\1\0\0\0\0\0\0\0", 8)         = 8
-epoll_wait(3, [{events=EPOLLIN, data={u32=2147483648, u64=2147483648}}], 1024, -1) = 1
-close(3)                                = 0
-close(8)                                = 0
-futex(0x7f3156072688, FUTEX_WAKE_PRIVATE, 1) = 1
-futex(0x7f3156273990, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 31335, NULL, FUTEX_BITSET_MATCH_ANY) = 0
-sigaltstack({ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=8192}, NULL) = 0
-munmap(0x7f31565c3000, 12288)           = 0
-exit_group(0)                           = ?
-+++ exited with 0 +++
+34724 execve("/home/mrcool/.deno/bin/deno", ["deno", "eval", "console.log(4)"], 0x7fff8c4e5a28 /* 82 vars */) = 0
+34724 brk(NULL)                         = 0x5638a388b000
+34724 arch_prctl(0x3001 /* ARCH_??? */, 0x7fff2ef1a020) = -1 EINVAL (Argument invalide)
+34724 access("/etc/ld.so.preload", R_OK) = 0
+34724 openat(AT_FDCWD, "/etc/ld.so.preload", O_RDONLY|O_CLOEXEC) = 3
+34724 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=0, ...}, AT_EMPTY_PATH) = 0
+34724 close(3)                          = 0
+34724 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+34724 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=281835, ...}, AT_EMPTY_PATH) = 0
+34724 mmap(NULL, 281835, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f46c0487000
+34724 close(3)                          = 0
+34724 openat(AT_FDCWD, "/usr/lib/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+34724 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+34724 newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=14416, ...}, AT_EMPTY_PATH) = 0
+34724 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f46c0485000
+34724 mmap(NULL, 16400, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f46c0480000
+34724 mmap(0x7f46c0481000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f46c0481000
+34724 mmap(0x7f46c0482000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f46c0482000
+34724 mmap(0x7f46c0483000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f46c0483000
+34724 close(3)                          = 0
+34724 openat(AT_FDCWD, "/usr/lib/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+34724 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+34724 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=728128, ...}, AT_EMPTY_PATH) = 0
+34724 mmap(NULL, 147912, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f46c045b000
+34724 mmap(0x7f46c045f000, 110592, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7f46c045f000
+34724 mmap(0x7f46c047a000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1f000) = 0x7f46c047a000
+34724 mmap(0x7f46c047e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7f46c047e000
+34724 close(3)                          = 0
+34724 openat(AT_FDCWD, "/usr/lib/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+34724 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+34724 newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=14424, ...}, AT_EMPTY_PATH) = 0
+34724 mmap(NULL, 16400, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f46c0456000
+34724 mmap(0x7f46c0457000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f46c0457000
+34724 mmap(0x7f46c0458000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f46c0458000
+34724 mmap(0x7f46c0459000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f46c0459000
+34724 close(3)                          = 0
+34724 openat(AT_FDCWD, "/usr/lib/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+34724 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+34724 newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=965088, ...}, AT_EMPTY_PATH) = 0
+34724 mmap(NULL, 966952, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f46c0369000
+34724 mmap(0x7f46c0377000, 520192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe000) = 0x7f46c0377000
+34724 mmap(0x7f46c03f6000, 385024, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8d000) = 0x7f46c03f6000
+34724 mmap(0x7f46c0454000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xea000) = 0x7f46c0454000
+34724 close(3)                          = 0
+34724 openat(AT_FDCWD, "/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+34724 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\20:\2\0\0\0\0\0"..., 832) = 832
+34724 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+34724 newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=1961632, ...}, AT_EMPTY_PATH) = 0
+34724 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+34724 mmap(NULL, 2006640, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f46c017f000
+34724 mmap(0x7f46c01a1000, 1429504, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7f46c01a1000
+34724 mmap(0x7f46c02fe000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17f000) = 0x7f46c02fe000
+34724 mmap(0x7f46c0356000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1d6000) = 0x7f46c0356000
+34724 mmap(0x7f46c035c000, 52848, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f46c035c000
+34724 close(3)                          = 0
+34724 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f46c017d000
+34724 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f46c017a000
+34724 arch_prctl(ARCH_SET_FS, 0x7f46c017ae80) = 0
+34724 set_tid_address(0x7f46c017b150)   = 34724
+34724 set_robust_list(0x7f46c017b160, 24) = 0
+34724 rseq(0x7f46c017b7a0, 0x20, 0, 0x53053053) = 0
+34724 mprotect(0x7f46c0356000, 16384, PROT_READ) = 0
+34724 mprotect(0x7f46c0454000, 4096, PROT_READ) = 0
+34724 mprotect(0x7f46c0459000, 4096, PROT_READ) = 0
+34724 mprotect(0x7f46c047e000, 4096, PROT_READ) = 0
+34724 mprotect(0x7f46c0483000, 4096, PROT_READ) = 0
+34724 mprotect(0x5638a2504000, 1630208, PROT_READ) = 0
+34724 mprotect(0x7f46c04fd000, 8192, PROT_READ) = 0
+34724 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+34724 munmap(0x7f46c0487000, 281835)    = 0
+34724 gettid()                          = 34724
+34724 gettid()                          = 34724
+34724 gettid()                          = 34724
+34724 gettid()                          = 34724
+34724 poll([{fd=0, events=0}, {fd=1, events=0}, {fd=2, events=0}], 3, 0) = 0 (Timeout)
+34724 rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[PIPE], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f46c01b8ab0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+34724 rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+34724 rt_sigaction(SIGSEGV, {sa_handler=0x5638a0de6130, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7f46c01b8ab0}, NULL, 8) = 0
+34724 rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+34724 rt_sigaction(SIGBUS, {sa_handler=0x5638a0de6130, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_SIGINFO, sa_restorer=0x7f46c01b8ab0}, NULL, 8) = 0
+34724 sigaltstack(NULL, {ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+34724 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f46c04c9000
+34724 mprotect(0x7f46c04c9000, 4096, PROT_NONE) = 0
+34724 sigaltstack({ss_sp=0x7f46c04ca000, ss_flags=0, ss_size=8192}, NULL) = 0
+34724 getrandom("\x06\xf6\xe6\xcc\xed\xcb\x59\xf9", 8, GRND_NONBLOCK) = 8
+34724 brk(NULL)                         = 0x5638a388b000
+34724 brk(0x5638a38ac000)               = 0x5638a38ac000
+34724 openat(AT_FDCWD, "/proc/self/maps", O_RDONLY|O_CLOEXEC) = 3
+34724 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+34724 newfstatat(3, "", {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
+34724 read(3, "56389d977000-56389fd72000 r--p 0"..., 1024) = 1024
+34724 read(3, "usr/lib/libc.so.6\n7f46c035c000-7"..., 1024) = 1024
+34724 read(3, "5b000-7f46c045f000 r--p 00000000"..., 1024) = 1024
+34724 read(3, "00 00:00 0 \n7f46c04ca000-7f46c04"..., 1024) = 901
+34724 close(3)                          = 0
+34724 sched_getaffinity(34724, 32, [0 1 2 3]) = 8
+34724 prlimit64(0, RLIMIT_NOFILE, NULL, {rlim_cur=1024*1024, rlim_max=1024*1024}) = 0
+34724 getrandom("\x0a\xbb\x3e\x40\x4e\xac\x13\x75\xdf\xe7\x60\xc3\xd0\x6d\x65\x5b", 16, GRND_INSECURE) = 16
+34724 epoll_create1(EPOLL_CLOEXEC)      = 3
+34724 eventfd2(0, EFD_CLOEXEC|EFD_NONBLOCK) = 4
+34724 epoll_ctl(3, EPOLL_CTL_ADD, 4, {events=EPOLLIN|EPOLLRDHUP|EPOLLET, data={u32=2147483648, u64=2147483648}}) = 0
+34724 fcntl(3, F_DUPFD_CLOEXEC, 3)      = 5
+34724 socketpair(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0, [6, 7]) = 0
+34724 fcntl(6, F_DUPFD_CLOEXEC, 3)      = 8
+34724 epoll_ctl(5, EPOLL_CTL_ADD, 8, {events=EPOLLIN|EPOLLRDHUP|EPOLLET, data={u32=2147483649, u64=2147483649}}) = 0
+34724 write(4, "\1\0\0\0\0\0\0\0", 8)   = 8
+34724 readlink("/proc/self/exe", "/home/mrcool/.deno/bin/deno", 256) = 27
+34724 openat(AT_FDCWD, "/home/mrcool/.deno/bin/deno", O_RDONLY|O_CLOEXEC) = 9
+34724 lseek(9, -40, SEEK_END)           = 114274160
+34724 read(9, "\261\v\314\5\0\0\0\0\244\227\3\1\0\0\0\0\0\0\0\0\0\0\0\0\1\0\0\0\0\0\0\0"..., 8192) = 40
+34724 close(9)                          = 0
+34724 brk(0x5638a38d2000)               = 0x5638a38d2000
+34724 ioctl(2, TCGETS, {c_iflag=ICRNL, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+34724 getcwd("/home/mrcool/dev/tree-sitter/tree-sitter-strace", 512) = 48
+34724 openat(AT_FDCWD, "/home/mrcool/dev/tree-sitter/tree-sitter-strace/deno.json", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34724 openat(AT_FDCWD, "/home/mrcool/dev/tree-sitter/tree-sitter-strace/deno.jsonc", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34724 openat(AT_FDCWD, "/home/mrcool/dev/tree-sitter/deno.json", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34724 openat(AT_FDCWD, "/home/mrcool/dev/tree-sitter/deno.jsonc", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34724 openat(AT_FDCWD, "/home/mrcool/dev/deno.json", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34724 openat(AT_FDCWD, "/home/mrcool/dev/deno.jsonc", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34724 openat(AT_FDCWD, "/home/mrcool/deno.json", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34724 openat(AT_FDCWD, "/home/mrcool/deno.jsonc", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34724 openat(AT_FDCWD, "/home/deno.json", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34724 openat(AT_FDCWD, "/home/deno.jsonc", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34724 openat(AT_FDCWD, "/deno.json", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34724 openat(AT_FDCWD, "/deno.jsonc", O_RDONLY|O_CLOEXEC) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34724 getcwd("/home/mrcool/dev/tree-sitter/tree-sitter-strace", 512) = 48
+34724 openat(AT_FDCWD, "/home/mrcool/dev/tree-sitter/tree-sitter-strace/package.json", O_RDONLY|O_CLOEXEC) = 9
+34724 statx(9, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=677, ...}) = 0
+34724 read(9, "{\n  \"name\": \"tree-sitter-strace\""..., 677) = 677
+34724 read(9, "", 32)                   = 0
+34724 close(9)                          = 0
+34724 readlink("/home", 0x7fff2eeef880, 1023) = -1 EINVAL (Argument invalide)
+34724 readlink("/home/mrcool", 0x7fff2eeef880, 1023) = -1 EINVAL (Argument invalide)
+34724 readlink("/home/mrcool/dev", 0x7fff2eeef880, 1023) = -1 EINVAL (Argument invalide)
+34724 readlink("/home/mrcool/dev/tree-sitter", 0x7fff2eeef880, 1023) = -1 EINVAL (Argument invalide)
+34724 readlink("/home/mrcool/dev/tree-sitter/tree-sitter-strace", 0x7fff2eeef880, 1023) = -1 EINVAL (Argument invalide)
+34724 readlink("/home/mrcool/dev/tree-sitter/tree-sitter-strace/node_modules", 0x7fff2eeef880, 1023) = -1 EINVAL (Argument invalide)
+34724 statx(AT_FDCWD, "/home/mrcool/.cache/deno/npm", AT_STATX_SYNC_AS_STAT, STATX_ALL, {stx_mask=STATX_ALL|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFDIR|0755, stx_size=4096, ...}) = 0
+34724 readlink("/home", 0x7fff2eef0e20, 1023) = -1 EINVAL (Argument invalide)
+34724 readlink("/home/mrcool", 0x7fff2eef0e20, 1023) = -1 EINVAL (Argument invalide)
+34724 readlink("/home/mrcool/.cache", 0x7fff2eef0e20, 1023) = -1 EINVAL (Argument invalide)
+34724 readlink("/home/mrcool/.cache/deno", 0x7fff2eef0e20, 1023) = -1 EINVAL (Argument invalide)
+34724 readlink("/home/mrcool/.cache/deno/npm", 0x7fff2eef0e20, 1023) = -1 EINVAL (Argument invalide)
+34724 rt_sigaction(SIGRT_1, {sa_handler=0x7f46c0203770, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f46c01b8ab0}, NULL, 8) = 0
+34724 rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+34724 mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f46bff79000
+34724 mprotect(0x7f46bff7a000, 2097152, PROT_READ|PROT_WRITE) = 0
+34724 rt_sigprocmask(SIG_BLOCK, ~[], [], 8) = 0
+34724 clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7f46c0179990, parent_tid=0x7f46c0179990, exit_signal=0, stack=0x7f46bff79000, stack_size=0x1ff840, tls=0x7f46c01796c0} => {parent_tid=[34725]}, 88) = 34725
+34725 rseq(0x7f46c0179fe0, 0x20, 0, 0x53053053 <unfinished ...>
+34724 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+34725 <... rseq resumed>)               = 0
+34724 <... rt_sigprocmask resumed>NULL, 8) = 0
+34725 set_robust_list(0x7f46c01799a0, 24) = 0
+34725 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+34724 mmap(NULL, 2101248, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0 <unfinished ...>
+34725 <... rt_sigprocmask resumed>NULL, 8) = 0
+34724 <... mmap resumed>)               = 0x7f46bfd78000
+34725 sigaltstack(NULL,  <unfinished ...>
+34724 mprotect(0x7f46bfd79000, 2097152, PROT_READ|PROT_WRITE <unfinished ...>
+34725 <... sigaltstack resumed>{ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+34724 <... mprotect resumed>)           = 0
+34725 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0 <unfinished ...>
+34724 rt_sigprocmask(SIG_BLOCK, ~[],  <unfinished ...>
+34725 <... mmap resumed>)               = 0x7f46c04c6000
+34724 <... rt_sigprocmask resumed>[], 8) = 0
+34725 mprotect(0x7f46c04c6000, 4096, PROT_NONE <unfinished ...>
+34724 clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7f46bff78990, parent_tid=0x7f46bff78990, exit_signal=0, stack=0x7f46bfd78000, stack_size=0x1ff840, tls=0x7f46bff786c0} <unfinished ...>
+34725 <... mprotect resumed>)           = 0
+34725 sigaltstack({ss_sp=0x7f46c04c7000, ss_flags=0, ss_size=8192}, NULL) = 0
+34724 <... clone3 resumed> => {parent_tid=[34726]}, 88) = 34726
+34726 rseq(0x7f46bff78fe0, 0x20, 0, 0x53053053 <unfinished ...>
+34724 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+34725 prctl(PR_SET_NAME, "tokio-runtime-w"... <unfinished ...>
+34726 <... rseq resumed>)               = 0
+34724 <... rt_sigprocmask resumed>NULL, 8) = 0
+34725 <... prctl resumed>)              = 0
+34726 set_robust_list(0x7f46bff789a0, 24 <unfinished ...>
+34725 mmap(NULL, 134217728, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+34726 <... set_robust_list resumed>)    = 0
+34725 <... mmap resumed>)               = 0x7f46b7d78000
+34726 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+34725 munmap(0x7f46b7d78000, 2654208 <unfinished ...>
+34726 <... rt_sigprocmask resumed>NULL, 8) = 0
+34726 sigaltstack(NULL,  <unfinished ...>
+34725 <... munmap resumed>)             = 0
+34726 <... sigaltstack resumed>{ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=0}) = 0
+34725 munmap(0x7f46bc000000, 64454656 <unfinished ...>
+34724 openat(AT_FDCWD, "/proc/self/cgroup", O_RDONLY|O_CLOEXEC <unfinished ...>
+34726 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0 <unfinished ...>
+34725 <... munmap resumed>)             = 0
+34724 <... openat resumed>)             = 9
+34726 <... mmap resumed>)               = 0x7f46c04c3000
+34725 mprotect(0x7f46b8000000, 135168, PROT_READ|PROT_WRITE <unfinished ...>
+34724 statx(9, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL,  <unfinished ...>
+34726 mprotect(0x7f46c04c3000, 4096, PROT_NONE <unfinished ...>
+34724 <... statx resumed>{stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0444, stx_size=0, ...}) = 0
+34725 <... mprotect resumed>)           = 0
+34724 lseek(9, 0, SEEK_CUR <unfinished ...>
+34726 <... mprotect resumed>)           = 0
+34724 <... lseek resumed>)              = 0
+34725 sched_getaffinity(34725, 32,  <unfinished ...>
+34724 read(9,  <unfinished ...>
+34726 sigaltstack({ss_sp=0x7f46c04c4000, ss_flags=0, ss_size=8192},  <unfinished ...>
+34724 <... read resumed>"0::/user.slice/user-1002.slice/u"..., 128) = 89
+34725 <... sched_getaffinity resumed>[0 1 2 3]) = 8
+34724 read(9,  <unfinished ...>
+34726 <... sigaltstack resumed>NULL)    = 0
+34724 <... read resumed>"", 39)         = 0
+34725 getrandom( <unfinished ...>
+34724 close(9 <unfinished ...>
+34726 prctl(PR_SET_NAME, "tokio-runtime-w"... <unfinished ...>
+34724 <... close resumed>)              = 0
+34725 <... getrandom resumed>"\xba\x26\x80\xa5\x96\xf7\x89\xa2\x5a\xd0\x0c\x4f\x6f\xe3\xa9\x03", 16, GRND_INSECURE) = 16
+34724 statx(AT_FDCWD, "/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/app.slice/app-gnome-wezterm-28525.scope/cgroup.controllers", AT_STATX_SYNC_AS_STAT, STATX_ALL,  <unfinished ...>
+34726 <... prctl resumed>)              = 0
+34724 <... statx resumed>{stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0444, stx_size=0, ...}) = 0
+34726 mmap(NULL, 134217728, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+34724 openat(AT_FDCWD, "/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/app.slice/app-gnome-wezterm-28525.scope/cpu.max", O_RDONLY|O_CLOEXEC <unfinished ...>
+34726 <... mmap resumed>)               = 0x7f46b0000000
+34724 <... openat resumed>)             = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34726 munmap(0x7f46b4000000, 67108864 <unfinished ...>
+34725 lstat("/home",  <unfinished ...>
+34724 openat(AT_FDCWD, "/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/app.slice/cpu.max", O_RDONLY|O_CLOEXEC <unfinished ...>
+34726 <... munmap resumed>)             = 0
+34725 <... lstat resumed>{st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+34724 <... openat resumed>)             = 9
+34726 mprotect(0x7f46b0000000, 135168, PROT_READ|PROT_WRITE <unfinished ...>
+34724 statx(9, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL,  <unfinished ...>
+34725 lstat("/home/mrcool",  <unfinished ...>
+34724 <... statx resumed>{stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=0, ...}) = 0
+34726 <... mprotect resumed>)           = 0
+34724 lseek(9, 0, SEEK_CUR <unfinished ...>
+34725 <... lstat resumed>{st_mode=S_IFDIR|0710, st_size=20480, ...}) = 0
+34724 <... lseek resumed>)              = 0
+34726 sched_getaffinity(34726, 32,  <unfinished ...>
+34725 lstat("/home/mrcool/.cache",  <unfinished ...>
+34724 read(9,  <unfinished ...>
+34726 <... sched_getaffinity resumed>[0 1 2 3]) = 8
+34725 <... lstat resumed>{st_mode=S_IFDIR|0700, st_size=12288, ...}) = 0
+34724 <... read resumed>"max 100000\n", 20) = 11
+34726 getrandom( <unfinished ...>
+34724 read(9,  <unfinished ...>
+34725 lstat("/home/mrcool/.cache/deno",  <unfinished ...>
+34724 <... read resumed>"", 9)          = 0
+34726 <... getrandom resumed>"\x2f\xf2\x94\x30\x13\x60\x6f\x08\x41\x9e\xe0\x6d\xf1\x54\xa6\x13", 16, GRND_INSECURE) = 16
+34724 close(9 <unfinished ...>
+34725 <... lstat resumed>{st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+34724 <... close resumed>)              = 0
+34726 lstat("/home",  <unfinished ...>
+34725 lstat("/home/mrcool/.cache/deno/dep_analysis_cache_v1",  <unfinished ...>
+34724 openat(AT_FDCWD, "/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/cpu.max", O_RDONLY|O_CLOEXEC <unfinished ...>
+34726 <... lstat resumed>{st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+34725 <... lstat resumed>{st_mode=S_IFREG|0644, st_size=1851392, ...}) = 0
+34724 <... openat resumed>)             = 9
+34726 lstat("/home/mrcool",  <unfinished ...>
+34724 statx(9, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL,  <unfinished ...>
+34725 getpid( <unfinished ...>
+34724 <... statx resumed>{stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=0, ...}) = 0
+34726 <... lstat resumed>{st_mode=S_IFDIR|0710, st_size=20480, ...}) = 0
+34724 lseek(9, 0, SEEK_CUR <unfinished ...>
+34725 <... getpid resumed>)             = 34724
+34724 <... lseek resumed>)              = 0
+34726 lstat("/home/mrcool/.cache",  <unfinished ...>
+34724 read(9,  <unfinished ...>
+34725 getpid( <unfinished ...>
+34724 <... read resumed>"max 100000\n", 20) = 11
+34726 <... lstat resumed>{st_mode=S_IFDIR|0700, st_size=12288, ...}) = 0
+34724 read(9,  <unfinished ...>
+34725 <... getpid resumed>)             = 34724
+34724 <... read resumed>"", 9)          = 0
+34726 lstat("/home/mrcool/.cache/deno",  <unfinished ...>
+34724 close(9 <unfinished ...>
+34725 openat(AT_FDCWD, "/home/mrcool/.cache/deno/dep_analysis_cache_v1", O_RDWR|O_CREAT|O_NOFOLLOW|O_CLOEXEC, 0644 <unfinished ...>
+34724 <... close resumed>)              = 0
+34726 <... lstat resumed>{st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+34724 openat(AT_FDCWD, "/sys/fs/cgroup/user.slice/user-1002.slice/cpu.max", O_RDONLY|O_CLOEXEC <unfinished ...>
+34725 <... openat resumed>)             = 9
+34726 lstat("/home/mrcool/.cache/deno/node_analysis_cache_v1",  <unfinished ...>
+34724 <... openat resumed>)             = 10
+34725 fstat(9,  <unfinished ...>
+34724 statx(10, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL,  <unfinished ...>
+34726 <... lstat resumed>{st_mode=S_IFREG|0644, st_size=598016, ...}) = 0
+34724 <... statx resumed>{stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=0, ...}) = 0
+34725 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=1851392, ...}) = 0
+34724 lseek(10, 0, SEEK_CUR <unfinished ...>
+34726 getpid( <unfinished ...>
+34724 <... lseek resumed>)              = 0
+34725 fstat(9,  <unfinished ...>
+34724 read(10,  <unfinished ...>
+34726 <... getpid resumed>)             = 34724
+34724 <... read resumed>"max 100000\n", 20) = 11
+34725 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=1851392, ...}) = 0
+34724 read(10,  <unfinished ...>
+34726 stat("/home/mrcool/.cache/deno/node_analysis_cache_v1",  <unfinished ...>
+34724 <... read resumed>"", 9)          = 0
+34725 stat("/home/mrcool/.cache/deno/dep_analysis_cache_v1",  <unfinished ...>
+34724 close(10 <unfinished ...>
+34726 <... stat resumed>{st_mode=S_IFREG|0644, st_size=598016, ...}) = 0
+34724 <... close resumed>)              = 0
+34725 <... stat resumed>{st_mode=S_IFREG|0644, st_size=1851392, ...}) = 0
+34724 openat(AT_FDCWD, "/sys/fs/cgroup/user.slice/cpu.max", O_RDONLY|O_CLOEXEC <unfinished ...>
+34726 openat(AT_FDCWD, "/home/mrcool/.cache/deno/node_analysis_cache_v1", O_RDWR|O_CREAT|O_NOFOLLOW|O_CLOEXEC, 0644 <unfinished ...>
+34724 <... openat resumed>)             = 10
+34725 lseek(9, 0, SEEK_SET <unfinished ...>
+34724 statx(10, "", AT_STATX_SYNC_AS_STAT|AT_EMPTY_PATH, STATX_ALL,  <unfinished ...>
+34726 <... openat resumed>)             = 11
+34724 <... statx resumed>{stx_mask=STATX_BASIC_STATS|STATX_MNT_ID, stx_attributes=0, stx_mode=S_IFREG|0644, stx_size=0, ...}) = 0
+34725 <... lseek resumed>)              = 0
+34724 lseek(10, 0, SEEK_CUR <unfinished ...>
+34726 fstat(11,  <unfinished ...>
+34724 <... lseek resumed>)              = 0
+34725 read(9,  <unfinished ...>
+34724 read(10,  <unfinished ...>
+34726 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=598016, ...}) = 0
+34724 <... read resumed>"max 100000\n", 20) = 11
+34725 <... read resumed>"SQLite format 3\0\20\0\1\1\0@  \0\0004\360\0\0\1\304"..., 100) = 100
+34724 read(10,  <unfinished ...>
+34726 fstat(11,  <unfinished ...>
+34724 <... read resumed>"", 9)          = 0
+34726 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=598016, ...}) = 0
+34724 close(10 <unfinished ...>
+34726 stat("/home/mrcool/.cache/deno/node_analysis_cache_v1",  <unfinished ...>
+34724 <... close resumed>)              = 0
+34726 <... stat resumed>{st_mode=S_IFREG|0644, st_size=598016, ...}) = 0
+34724 openat(AT_FDCWD, "/sys/fs/cgroup/cpu.max", O_RDONLY|O_CLOEXEC <unfinished ...>
+34726 futex(0x5638a26aad80, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+34725 futex(0x5638a26aad80, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+34724 <... openat resumed>)             = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34726 <... futex resumed>)              = 0
+34725 <... futex resumed>)              = -1 EAGAIN (Ressource temporairement non disponible)
+34724 sched_getaffinity(0, 128,  <unfinished ...>
+34726 lseek(11, 0, SEEK_SET <unfinished ...>
+34724 <... sched_getaffinity resumed>[0 1 2 3]) = 8
+34725 futex(0x5638a26aad80, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+34726 <... lseek resumed>)              = 0
+34725 <... futex resumed>)              = 0
+34726 read(11, "SQLite format 3\0\20\0\1\1\0@  \0\0\0056\0\0\0\222"..., 100) = 100
+34726 futex(0x5638a26aad80, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+34725 futex(0x5638a26aad80, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+34724 ioctl(1, TCGETS <unfinished ...>
+34726 <... futex resumed>)              = 0
+34724 <... ioctl resumed>, {c_iflag=ICRNL, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+34725 <... futex resumed>)              = -1 EAGAIN (Ressource temporairement non disponible)
+34726 futex(0x5638a26aad80, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+34725 futex(0x5638a26aad80, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+34726 <... futex resumed>)              = 0
+34725 <... futex resumed>)              = -1 EAGAIN (Ressource temporairement non disponible)
+34726 futex(0x5638a26aad80, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+34725 futex(0x5638a26aad80, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+34726 <... futex resumed>)              = -1 EAGAIN (Ressource temporairement non disponible)
+34725 <... futex resumed>)              = 0
+34726 futex(0x5638a26aad80, FUTEX_WAKE_PRIVATE, 1) = 0
+34725 fcntl(9, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+34725 fcntl(9, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510} <unfinished ...>
+34726 fcntl(11, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1} <unfinished ...>
+34725 <... fcntl resumed>)              = 0
+34724 openat(AT_FDCWD, "/sys/devices/system/cpu/online", O_RDONLY|O_CLOEXEC <unfinished ...>
+34726 <... fcntl resumed>)              = 0
+34725 fcntl(9, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1} <unfinished ...>
+34724 <... openat resumed>)             = 10
+34726 fcntl(11, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510} <unfinished ...>
+34724 read(10,  <unfinished ...>
+34725 <... fcntl resumed>)              = 0
+34726 <... fcntl resumed>)              = 0
+34724 <... read resumed>"0-3\n", 1024)  = 4
+34725 stat("/home/mrcool/.cache/deno/dep_analysis_cache_v1-journal",  <unfinished ...>
+34724 close(10 <unfinished ...>
+34726 fcntl(11, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1} <unfinished ...>
+34724 <... close resumed>)              = 0
+34725 <... stat resumed>{st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+34724 gettid( <unfinished ...>
+34726 <... fcntl resumed>)              = 0
+34724 <... gettid resumed>)             = 34724
+34725 stat("/home/mrcool/.cache/deno/dep_analysis_cache_v1-wal",  <unfinished ...>
+34724 gettid( <unfinished ...>
+34726 stat("/home/mrcool/.cache/deno/node_analysis_cache_v1-journal",  <unfinished ...>
+34724 <... gettid resumed>)             = 34724
+34725 <... stat resumed>0x7f46c0176af0) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34724 uname( <unfinished ...>
+34726 <... stat resumed>{st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+34724 <... uname resumed>{sysname="Linux", nodename="mrcool", ...}) = 0
+34725 fstat(9,  <unfinished ...>
+34726 stat("/home/mrcool/.cache/deno/node_analysis_cache_v1-wal",  <unfinished ...>
+34724 pkey_alloc(0, PKEY_DISABLE_WRITE <unfinished ...>
+34725 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=1851392, ...}) = 0
+34724 <... pkey_alloc resumed>)         = -1 EINVAL (Argument invalide)
+34726 <... stat resumed>0x7f46bff75af0) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34724 mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0 <unfinished ...>
+34725 lseek(9, 0, SEEK_SET <unfinished ...>
+34724 <... mmap resumed>)               = 0x7f46bf577000
+34726 fstat(11,  <unfinished ...>
+34724 mprotect(0x7f46bf578000, 8388608, PROT_READ|PROT_WRITE <unfinished ...>
+34725 <... lseek resumed>)              = 0
+34726 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=598016, ...}) = 0
+34724 <... mprotect resumed>)           = 0
+34725 read(9,  <unfinished ...>
+34726 lseek(11, 0, SEEK_SET <unfinished ...>
+34725 <... read resumed>"SQLite format 3\0\20\0\1\1\0@  \0\0004\360\0\0\1\304"..., 4096) = 4096
+34724 rt_sigprocmask(SIG_BLOCK, ~[],  <unfinished ...>
+34726 <... lseek resumed>)              = 0
+34724 <... rt_sigprocmask resumed>[], 8) = 0
+34726 read(11,  <unfinished ...>
+34724 clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7f46bfd77990, parent_tid=0x7f46bfd77990, exit_signal=0, stack=0x7f46bf577000, stack_size=0x7ff840, tls=0x7f46bfd776c0} <unfinished ...>
+34726 <... read resumed>"SQLite format 3\0\20\0\1\1\0@  \0\0\0056\0\0\0\222"..., 4096) = 4096
+34726 futex(0x5638a26aad80, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+34725 futex(0x5638a26aad80, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+34724 <... clone3 resumed> => {parent_tid=[34727]}, 88) = 34727
+34727 rseq(0x7f46bfd77fe0, 0x20, 0, 0x53053053 <unfinished ...>
+34726 <... futex resumed>)              = 0
+34724 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+34727 <... rseq resumed>)               = 0
+34725 <... futex resumed>)              = -1 EAGAIN (Ressource temporairement non disponible)
+34724 <... rt_sigprocmask resumed>NULL, 8) = 0
+34727 set_robust_list(0x7f46bfd779a0, 24 <unfinished ...>
+34725 futex(0x5638a26aad80, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+34724 mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0 <unfinished ...>
+34727 <... set_robust_list resumed>)    = 0
+34726 fcntl(11, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0} <unfinished ...>
+34725 <... futex resumed>)              = 0
+34724 <... mmap resumed>)               = 0x7f46bed76000
+34727 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+34726 <... fcntl resumed>)              = 0
+34724 mprotect(0x7f46bed77000, 8388608, PROT_READ|PROT_WRITE <unfinished ...>
+34727 <... rt_sigprocmask resumed>NULL, 8) = 0
+34725 fcntl(9, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0} <unfinished ...>
+34724 <... mprotect resumed>)           = 0
+34727 prctl(PR_SET_NAME, "V8 DefaultWorke"... <unfinished ...>
+34726 fcntl(11, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1} <unfinished ...>
+34725 <... fcntl resumed>)              = 0
+34724 rt_sigprocmask(SIG_BLOCK, ~[],  <unfinished ...>
+34727 <... prctl resumed>)              = 0
+34726 <... fcntl resumed>)              = 0
+34724 <... rt_sigprocmask resumed>[], 8) = 0
+34727 futex(0x5638a38c6490, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+34724 clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7f46bf576990, parent_tid=0x7f46bf576990, exit_signal=0, stack=0x7f46bed76000, stack_size=0x7ff840, tls=0x7f46bf5766c0} <unfinished ...>
+34726 fcntl(11, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510} <unfinished ...>
+34725 fcntl(9, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1} <unfinished ...>
+34726 <... fcntl resumed>)              = 0
+34725 <... fcntl resumed>)              = 0
+34724 <... clone3 resumed> => {parent_tid=[34728]}, 88) = 34728
+34728 rseq(0x7f46bf576fe0, 0x20, 0, 0x53053053 <unfinished ...>
+34726 fcntl(11, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1} <unfinished ...>
+34724 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+34728 <... rseq resumed>)               = 0
+34725 fcntl(9, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510} <unfinished ...>
+34724 <... rt_sigprocmask resumed>NULL, 8) = 0
+34728 set_robust_list(0x7f46bf5769a0, 24 <unfinished ...>
+34726 <... fcntl resumed>)              = 0
+34724 mmap(NULL, 8392704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0 <unfinished ...>
+34728 <... set_robust_list resumed>)    = 0
+34725 <... fcntl resumed>)              = 0
+34724 <... mmap resumed>)               = 0x7f46be575000
+34728 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+34726 stat("/home/mrcool/.cache/deno/node_analysis_cache_v1-journal",  <unfinished ...>
+34724 mprotect(0x7f46be576000, 8388608, PROT_READ|PROT_WRITE <unfinished ...>
+34728 <... rt_sigprocmask resumed>NULL, 8) = 0
+34725 fcntl(9, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1} <unfinished ...>
+34724 <... mprotect resumed>)           = 0
+34728 prctl(PR_SET_NAME, "V8 DefaultWorke"... <unfinished ...>
+34726 <... stat resumed>{st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+34724 rt_sigprocmask(SIG_BLOCK, ~[],  <unfinished ...>
+34728 <... prctl resumed>)              = 0
+34725 <... fcntl resumed>)              = 0
+34724 <... rt_sigprocmask resumed>[], 8) = 0
+34728 futex(0x5638a38c6490, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+34726 lseek(11, 24, SEEK_SET <unfinished ...>
+34724 clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7f46bed75990, parent_tid=0x7f46bed75990, exit_signal=0, stack=0x7f46be575000, stack_size=0x7ff840, tls=0x7f46bed756c0} <unfinished ...>
+34725 stat("/home/mrcool/.cache/deno/dep_analysis_cache_v1-journal",  <unfinished ...>
+34726 <... lseek resumed>)              = 24
+34725 <... stat resumed>{st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+34724 <... clone3 resumed> => {parent_tid=[34729]}, 88) = 34729
+34729 rseq(0x7f46bed75fe0, 0x20, 0, 0x53053053 <unfinished ...>
+34726 read(11,  <unfinished ...>
+34724 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+34729 <... rseq resumed>)               = 0
+34725 lseek(9, 24, SEEK_SET <unfinished ...>
+34724 <... rt_sigprocmask resumed>NULL, 8) = 0
+34729 set_robust_list(0x7f46bed759a0, 24 <unfinished ...>
+34726 <... read resumed>"\0\0\0056\0\0\0\222\0\0\0T\0\0\0m", 16) = 16
+34729 <... set_robust_list resumed>)    = 0
+34725 <... lseek resumed>)              = 24
+34729 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+34726 stat("/home/mrcool/.cache/deno/node_analysis_cache_v1-wal",  <unfinished ...>
+34729 <... rt_sigprocmask resumed>NULL, 8) = 0
+34725 read(9,  <unfinished ...>
+34729 prctl(PR_SET_NAME, "V8 DefaultWorke"... <unfinished ...>
+34726 <... stat resumed>0x7f46bff767e0) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34724 mprotect(0x5638a269b000, 4096, PROT_READ <unfinished ...>
+34729 <... prctl resumed>)              = 0
+34726 fstat(11,  <unfinished ...>
+34725 <... read resumed>"\0\0004\360\0\0\1\304\0\0\0004\0\0\1\177", 16) = 16
+34724 <... mprotect resumed>)           = 0
+34729 futex(0x5638a38c6490, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+34726 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=598016, ...}) = 0
+34725 stat("/home/mrcool/.cache/deno/dep_analysis_cache_v1-wal",  <unfinished ...>
+34724 gettid( <unfinished ...>
+34726 fcntl(11, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0} <unfinished ...>
+34724 <... gettid resumed>)             = 34724
+34725 <... stat resumed>0x7f46c01777e0) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34726 <... fcntl resumed>)              = 0
+34725 fstat(9,  <unfinished ...>
+34724 gettid( <unfinished ...>
+34726 fcntl(11, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1} <unfinished ...>
+34725 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=1851392, ...}) = 0
+34724 <... gettid resumed>)             = 34724
+34726 <... fcntl resumed>)              = 0
+34725 fcntl(9, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0} <unfinished ...>
+34726 fcntl(11, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510} <unfinished ...>
+34725 <... fcntl resumed>)              = 0
+34726 <... fcntl resumed>)              = 0
+34725 fcntl(9, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1} <unfinished ...>
+34726 fcntl(11, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1} <unfinished ...>
+34725 <... fcntl resumed>)              = 0
+34726 <... fcntl resumed>)              = 0
+34725 fcntl(9, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510} <unfinished ...>
+34726 stat("/home/mrcool/.cache/deno/node_analysis_cache_v1-journal",  <unfinished ...>
+34725 <... fcntl resumed>)              = 0
+34726 <... stat resumed>{st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+34725 fcntl(9, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1} <unfinished ...>
+34726 lseek(11, 24, SEEK_SET <unfinished ...>
+34725 <... fcntl resumed>)              = 0
+34726 <... lseek resumed>)              = 24
+34725 stat("/home/mrcool/.cache/deno/dep_analysis_cache_v1-journal",  <unfinished ...>
+34726 read(11,  <unfinished ...>
+34725 <... stat resumed>{st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+34726 <... read resumed>"\0\0\0056\0\0\0\222\0\0\0T\0\0\0m", 16) = 16
+34725 lseek(9, 24, SEEK_SET <unfinished ...>
+34726 stat("/home/mrcool/.cache/deno/node_analysis_cache_v1-wal",  <unfinished ...>
+34725 <... lseek resumed>)              = 24
+34726 <... stat resumed>0x7f46bff767e0) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34725 read(9,  <unfinished ...>
+34726 fstat(11,  <unfinished ...>
+34725 <... read resumed>"\0\0004\360\0\0\1\304\0\0\0004\0\0\1\177", 16) = 16
+34726 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=598016, ...}) = 0
+34725 stat("/home/mrcool/.cache/deno/dep_analysis_cache_v1-wal",  <unfinished ...>
+34726 fcntl(11, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0} <unfinished ...>
+34724 brk(0x5638a38f6000 <unfinished ...>
+34725 <... stat resumed>0x7f46c01777e0) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34726 <... fcntl resumed>)              = 0
+34724 <... brk resumed>)                = 0x5638a38f6000
+34725 fstat(9,  <unfinished ...>
+34726 fcntl(11, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1} <unfinished ...>
+34725 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=1851392, ...}) = 0
+34726 <... fcntl resumed>)              = 0
+34725 fcntl(9, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0} <unfinished ...>
+34726 fcntl(11, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510} <unfinished ...>
+34725 <... fcntl resumed>)              = 0
+34724 fcntl(0, F_DUPFD_CLOEXEC, 3 <unfinished ...>
+34726 <... fcntl resumed>)              = 0
+34724 <... fcntl resumed>)              = 10
+34725 fcntl(9, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1} <unfinished ...>
+34726 fcntl(11, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1} <unfinished ...>
+34724 fcntl(1, F_DUPFD_CLOEXEC, 3 <unfinished ...>
+34725 <... fcntl resumed>)              = 0
+34724 <... fcntl resumed>)              = 12
+34726 <... fcntl resumed>)              = 0
+34724 fcntl(2, F_DUPFD_CLOEXEC, 3 <unfinished ...>
+34725 fcntl(9, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510} <unfinished ...>
+34724 <... fcntl resumed>)              = 13
+34726 stat("/home/mrcool/.cache/deno/node_analysis_cache_v1-journal",  <unfinished ...>
+34725 <... fcntl resumed>)              = 0
+34726 <... stat resumed>{st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+34725 fcntl(9, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1} <unfinished ...>
+34726 lseek(11, 24, SEEK_SET <unfinished ...>
+34725 <... fcntl resumed>)              = 0
+34726 <... lseek resumed>)              = 24
+34725 stat("/home/mrcool/.cache/deno/dep_analysis_cache_v1-journal",  <unfinished ...>
+34726 read(11,  <unfinished ...>
+34725 <... stat resumed>{st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+34726 <... read resumed>"\0\0\0056\0\0\0\222\0\0\0T\0\0\0m", 16) = 16
+34725 lseek(9, 24, SEEK_SET <unfinished ...>
+34726 stat("/home/mrcool/.cache/deno/node_analysis_cache_v1-wal",  <unfinished ...>
+34725 <... lseek resumed>)              = 24
+34726 <... stat resumed>0x7f46bff767e0) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34724 brk(0x5638a3919000 <unfinished ...>
+34725 read(9,  <unfinished ...>
+34726 fstat(11,  <unfinished ...>
+34724 <... brk resumed>)                = 0x5638a3919000
+34725 <... read resumed>"\0\0004\360\0\0\1\304\0\0\0004\0\0\1\177", 16) = 16
+34726 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=598016, ...}) = 0
+34725 stat("/home/mrcool/.cache/deno/dep_analysis_cache_v1-wal",  <unfinished ...>
+34726 fcntl(11, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0} <unfinished ...>
+34725 <... stat resumed>0x7f46c01777e0) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34726 <... fcntl resumed>)              = 0
+34725 fstat(9, {st_mode=S_IFREG|0644, st_size=1851392, ...}) = 0
+34725 fcntl(9, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0} <unfinished ...>
+34724 openat(AT_FDCWD, "/proc/self/maps", O_RDONLY|O_CLOEXEC <unfinished ...>
+34726 fcntl(11, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1} <unfinished ...>
+34725 <... fcntl resumed>)              = 0
+34726 <... fcntl resumed>)              = 0
+34724 <... openat resumed>)             = 14
+34724 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+34726 fcntl(11, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510} <unfinished ...>
+34725 fcntl(9, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1} <unfinished ...>
+34724 newfstatat(14, "",  <unfinished ...>
+34726 <... fcntl resumed>)              = 0
+34725 <... fcntl resumed>)              = 0
+34724 <... newfstatat resumed>{st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
+34726 fcntl(11, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1} <unfinished ...>
+34724 read(14,  <unfinished ...>
+34725 fcntl(9, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510} <unfinished ...>
+34726 <... fcntl resumed>)              = 0
+34725 <... fcntl resumed>)              = 0
+34724 <... read resumed>"56389d977000-56389fd72000 r--p 0"..., 1024) = 1024
+34726 stat("/home/mrcool/.cache/deno/node_analysis_cache_v1-journal",  <unfinished ...>
+34725 fcntl(9, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1} <unfinished ...>
+34724 read(14,  <unfinished ...>
+34726 <... stat resumed>{st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+34725 <... fcntl resumed>)              = 0
+34724 <... read resumed>"0 0 \n7f46bed76000-7f46bed77000 -"..., 1024) = 1024
+34726 lseek(11, 24, SEEK_SET <unfinished ...>
+34725 stat("/home/mrcool/.cache/deno/dep_analysis_cache_v1-journal",  <unfinished ...>
+34724 read(14,  <unfinished ...>
+34726 <... lseek resumed>)              = 24
+34725 <... stat resumed>{st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+34724 <... read resumed>"r-xp 0000e000 08:01 4853215     "..., 1024) = 1024
+34726 read(11,  <unfinished ...>
+34725 lseek(9, 24, SEEK_SET <unfinished ...>
+34724 read(14,  <unfinished ...>
+34726 <... read resumed>"\0\0\0056\0\0\0\222\0\0\0T\0\0\0m", 16) = 16
+34725 <... lseek resumed>)              = 24
+34724 <... read resumed>"7f46c047a000-7f46c047e000 r--p 0"..., 1024) = 1024
+34726 stat("/home/mrcool/.cache/deno/node_analysis_cache_v1-wal",  <unfinished ...>
+34725 read(9,  <unfinished ...>
+34724 read(14,  <unfinished ...>
+34726 <... stat resumed>0x7f46bff76800) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34725 <... read resumed>"\0\0004\360\0\0\1\304\0\0\0004\0\0\1\177", 16) = 16
+34724 <... read resumed>"---p 00000000 00:00 0 \n7f46c04ca"..., 1024) = 912
+34726 fstat(11,  <unfinished ...>
+34725 stat("/home/mrcool/.cache/deno/dep_analysis_cache_v1-wal",  <unfinished ...>
+34724 close(14 <unfinished ...>
+34726 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=598016, ...}) = 0
+34724 <... close resumed>)              = 0
+34725 <... stat resumed>0x7f46c0177800) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34724 sched_getaffinity(34724, 32,  <unfinished ...>
+34726 fstat(11,  <unfinished ...>
+34724 <... sched_getaffinity resumed>[0 1 2 3]) = 8
+34725 fstat(9,  <unfinished ...>
+34726 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=598016, ...}) = 0
+34725 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=1851392, ...}) = 0
+34726 mmap(NULL, 598016, PROT_READ, MAP_SHARED, 11, 0 <unfinished ...>
+34725 fstat(9, {st_mode=S_IFREG|0644, st_size=1851392, ...}) = 0
+34726 <... mmap resumed>)               = 0x7f46be4e3000
+34724 brk(0x5638a393c000 <unfinished ...>
+34725 mmap(NULL, 1851392, PROT_READ, MAP_SHARED, 9, 0 <unfinished ...>
+34724 <... brk resumed>)                = 0x5638a393c000
+34725 <... mmap resumed>)               = 0x7f46be31f000
+34726 fcntl(11, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0} <unfinished ...>
+34725 fcntl(9, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0} <unfinished ...>
+34726 <... fcntl resumed>)              = 0
+34725 <... fcntl resumed>)              = 0
+34724 getpid( <unfinished ...>
+34726 futex(0x7f46bff78688, FUTEX_WAIT_PRIVATE, 1, {tv_sec=9, tv_nsec=999994018} <unfinished ...>
+34724 <... getpid resumed>)             = 34724
+34725 futex(0x7f46c0179688, FUTEX_WAIT_PRIVATE, 1, {tv_sec=9, tv_nsec=999998284} <unfinished ...>
+34724 gettid()                          = 34724
+34724 openat(AT_FDCWD, "/dev/urandom", O_RDONLY) = 14
+34724 newfstatat(14, "", {st_mode=S_IFCHR|0666, st_rdev=makedev(0x1, 0x9), ...}, AT_EMPTY_PATH) = 0
+34724 ioctl(14, TCGETS, 0x7fff2eeefb90) = -1 EINVAL (Argument invalide)
+34724 read(14, "\202&s\322\331e\37\4z\241\226\"7\0\0105\215\271\262\364\202g\276\346\344P\300\241\337\257\374\v"..., 4096) = 4096
+34724 close(14)                         = 0
+34724 gettid()                          = 34724
+34724 openat(AT_FDCWD, "/proc/self/maps", O_RDONLY) = 14
+34724 newfstatat(14, "", {st_mode=S_IFREG|0444, st_size=0, ...}, AT_EMPTY_PATH) = 0
+34724 read(14, "56389d977000-56389fd72000 r--p 0"..., 1024) = 1024
+34724 close(14)                         = 0
+34724 mmap(0x563820d80000, 537128960, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x563820d80000
+34724 munmap(0x563840d80000, 258048)    = 0
+34724 mmap(0x2fd98a100000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x2fd98a100000
+34724 munmap(0x2fd98a140000, 258048)    = 0
+34724 mprotect(0x2fd98a100000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 munmap(0x2fd98a110000, 196608)    = 0
+34724 mprotect(0x2fd98a100000, 65536, PROT_READ) = 0
+34724 mmap(0x5d8f6180000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x5d8f6180000
+34724 munmap(0x5d8f61c0000, 258048)     = 0
+34724 mprotect(0x5d8f6180000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x191141640000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x191141640000
+34724 munmap(0x191141680000, 258048)    = 0
+34724 mprotect(0x191141640000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x3a6ea6280000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x3a6ea6280000
+34724 munmap(0x3a6ea62c0000, 258048)    = 0
+34724 mprotect(0x3a6ea6280000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x2422c8580000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x2422c8580000
+34724 munmap(0x2422c85c0000, 258048)    = 0
+34724 mprotect(0x2422c8580000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 openat(AT_FDCWD, "/dev/urandom", O_RDONLY) = 14
+34724 newfstatat(14, "", {st_mode=S_IFCHR|0666, st_rdev=makedev(0x1, 0x9), ...}, AT_EMPTY_PATH) = 0
+34724 ioctl(14, TCGETS, 0x7fff2eeefbc0) = -1 EINVAL (Argument invalide)
+34724 read(14, "\331\16\372E\233\4d\34p\211\240/\35\247}eT\241L\222\v\320\373\22\377\241@\360\355\261|\32"..., 4096) = 4096
+34724 close(14)                         = 0
+34724 mmap(0x7b057640000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x7b057640000
+34724 munmap(0x7b057680000, 258048)     = 0
+34724 mprotect(0x7b057640000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 brk(0x5638a395d000)               = 0x5638a395d000
+34724 brk(0x5638a398c000)               = 0x5638a398c000
+34724 mmap(0x1b6b3f0c0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x1b6b3f0c0000
+34724 munmap(0x1b6b3f100000, 258048)    = 0
+34724 mprotect(0x1b6b3f0c0000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(NULL, 135168, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f46c04a2000
+34724 mmap(NULL, 135168, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f46be2fe000
+34724 brk(0x5638a396e000)               = 0x5638a396e000
+34724 mmap(NULL, 135168, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f46be2dd000
+34724 mmap(0x109452500000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x109452500000
+34724 munmap(0x109452540000, 258048)    = 0
+34724 mprotect(0x109452500000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x178a7f780000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x178a7f780000
+34724 munmap(0x178a7f7c0000, 258048)    = 0
+34724 mprotect(0x178a7f780000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x1d9326280000, 450560, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x1d9326280000
+34724 munmap(0x1d93262af000, 258048)    = 0
+34724 mprotect(0x1d9326280000, 192512, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x1987ec8c0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x1987ec8c0000
+34724 munmap(0x1987ec900000, 258048)    = 0
+34724 mprotect(0x1987ec8c0000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 brk(0x5638a399e000)               = 0x5638a399e000
+34724 mmap(0x218234bc0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x218234bc0000
+34724 munmap(0x218234c00000, 258048)    = 0
+34724 mprotect(0x218234bc0000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x1235461c0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x1235461c0000
+34724 munmap(0x123546200000, 258048)    = 0
+34724 mprotect(0x1235461c0000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0xb4773600000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0xb4773600000
+34724 munmap(0xb4773640000, 258048)     = 0
+34724 mprotect(0xb4773600000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x11942e380000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x11942e380000
+34724 munmap(0x11942e3c0000, 258048)    = 0
+34724 mprotect(0x11942e380000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x21e2a48c0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x21e2a48c0000
+34724 munmap(0x21e2a4900000, 258048)    = 0
+34724 mprotect(0x21e2a48c0000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x1ab7ff880000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x1ab7ff880000
+34724 munmap(0x1ab7ff8c0000, 258048)    = 0
+34724 mprotect(0x1ab7ff880000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x3de7cc480000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x3de7cc480000
+34724 munmap(0x3de7cc4c0000, 258048)    = 0
+34724 mprotect(0x3de7cc480000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x7424abc0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x7424abc0000
+34724 munmap(0x7424ac00000, 258048)     = 0
+34724 mprotect(0x7424abc0000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(NULL, 266240, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f46be29c000
+34724 brk(0x5638a399c000)               = 0x5638a399c000
+34724 mmap(0x117269040000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x117269040000
+34724 munmap(0x117269080000, 258048)    = 0
+34724 mprotect(0x117269040000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x5774ce80000, 454656, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x5774ce80000
+34724 munmap(0x5774ceb0000, 258048)     = 0
+34724 mprotect(0x5774ce80000, 196608, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x3b0f5e8c0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x3b0f5e8c0000
+34724 munmap(0x3b0f5e900000, 258048)    = 0
+34724 mprotect(0x3b0f5e8c0000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x292fd5f80000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x292fd5f80000
+34724 munmap(0x292fd5fc0000, 258048)    = 0
+34724 mprotect(0x292fd5f80000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x14d432700000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x14d432700000
+34724 munmap(0x14d432740000, 258048)    = 0
+34724 mprotect(0x14d432700000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x352c35c0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x352c35c0000
+34724 munmap(0x352c3600000, 258048)     = 0
+34724 mprotect(0x352c35c0000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x120658a80000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x120658a80000
+34724 munmap(0x120658ac0000, 258048)    = 0
+34724 mprotect(0x120658a80000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x283628100000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x283628100000
+34724 munmap(0x283628140000, 258048)    = 0
+34724 mprotect(0x283628100000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 brk(0x5638a39be000)               = 0x5638a39be000
+34724 mmap(0x240f97240000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x240f97240000
+34724 munmap(0x240f97280000, 258048)    = 0
+34724 mprotect(0x240f97240000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(NULL, 528384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f46be21b000
+34724 munmap(0x7f46be29c000, 266240)    = 0
+34724 mmap(0x26180ec80000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x26180ec80000
+34724 munmap(0x26180ecc0000, 258048)    = 0
+34724 mprotect(0x26180ec80000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 brk(0x5638a39fe000)               = 0x5638a39fe000
+34724 munmap(0x7f46be21b000, 528384)    = 0
+34724 munmap(0x7f46be2fe000, 135168)    = 0
+34724 munmap(0x26180eca0000, 131072)    = 0
+34724 mmap(0x830e4000000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x830e4000000
+34724 munmap(0x830e4040000, 258048)     = 0
+34724 mprotect(0x830e4000000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 openat(AT_FDCWD, "/dev/urandom", O_RDONLY) = 14
+34724 newfstatat(14, "", {st_mode=S_IFCHR|0666, st_rdev=makedev(0x1, 0x9), ...}, AT_EMPTY_PATH) = 0
+34724 ioctl(14, TCGETS, 0x7fff2eef0340) = -1 EINVAL (Argument invalide)
+34724 read(14, "F<\226\370#*\26\212le\31x@X\355\263\22\244n4K&4$\217\367\2\377\266|=D"..., 4096) = 4096
+34724 close(14)                         = 0
+34724 mmap(0x15d476280000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x15d476280000
+34724 munmap(0x15d4762c0000, 258048)    = 0
+34724 mprotect(0x15d476280000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0xe71e3540000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0xe71e3540000
+34724 munmap(0xe71e3580000, 258048)     = 0
+34724 mprotect(0xe71e3540000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 brk(0x5638a3a3e000)               = 0x5638a3a3e000
+34724 mmap(0x229b51140000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x229b51140000
+34724 munmap(0x229b51180000, 258048)    = 0
+34724 mprotect(0x229b51140000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0xbe576580000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0xbe576580000
+34724 munmap(0xbe5765c0000, 258048)     = 0
+34724 mprotect(0xbe576580000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 brk(0x5638a3a7e000)               = 0x5638a3a7e000
+34724 mmap(0x1836add80000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x1836add80000
+34724 munmap(0x1836addc0000, 258048)    = 0
+34724 mprotect(0x1836add80000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x32521a6c0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x32521a6c0000
+34724 munmap(0x32521a700000, 258048)    = 0
+34724 mprotect(0x32521a6c0000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x119d81d40000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x119d81d40000
+34724 munmap(0x119d81d80000, 258048)    = 0
+34724 mprotect(0x119d81d40000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x37fbbab40000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x37fbbab40000
+34724 munmap(0x37fbbab80000, 258048)    = 0
+34724 mprotect(0x37fbbab40000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 mmap(0x1ebdfedc0000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x1ebdfedc0000
+34724 munmap(0x1ebdfee00000, 258048)    = 0
+34724 mprotect(0x1ebdfedc0000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 brk(0x5638a3afe000)               = 0x5638a3afe000
+34724 brk(0x5638a3a1c000)               = 0x5638a3a1c000
+34724 mmap(0x2abc49840000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x2abc49840000
+34724 munmap(0x2abc49880000, 258048)    = 0
+34724 mprotect(0x2abc49840000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 getpid()                          = 34724
+34724 getcwd("/home/mrcool/dev/tree-sitter/tree-sitter-strace", 512) = 48
+34724 getcwd("/home/mrcool/dev/tree-sitter/tree-sitter-strace", 512) = 48
+34724 fcntl(9, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+34724 fcntl(9, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+34724 fcntl(9, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+34724 stat("/home/mrcool/.cache/deno/dep_analysis_cache_v1-journal", {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+34724 stat("/home/mrcool/.cache/deno/dep_analysis_cache_v1-wal", 0x7fff2eef04c0) = -1 ENOENT (Aucun fichier ou dossier de ce type)
+34724 fstat(9, {st_mode=S_IFREG|0644, st_size=1851392, ...}) = 0
+34724 fcntl(9, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+34724 getcwd("/home/mrcool/dev/tree-sitter/tree-sitter-strace", 512) = 48
+34724 mmap(0x2a2a37340000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x2a2a37340000
+34724 munmap(0x2a2a37380000, 258048)    = 0
+34724 mprotect(0x2a2a37340000, 262144, PROT_READ|PROT_WRITE) = 0
+34724 write(1, "\33[33m4\33[39m\n", 12) = 12
+34724 futex(0x5638a38c6490, FUTEX_WAKE_PRIVATE, 1) = 1
+34727 <... futex resumed>)              = 0
+34727 futex(0x5638a38c6498, FUTEX_WAKE_PRIVATE, 1) = 0
+34724 close(10 <unfinished ...>
+34727 mmap(0x7f46b4000000, 67108864, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+34724 <... close resumed>)              = 0
+34724 close(12 <unfinished ...>
+34727 <... mmap resumed>)               = 0x7f46b4000000
+34724 <... close resumed>)              = 0
+34727 mprotect(0x7f46b4000000, 135168, PROT_READ|PROT_WRITE <unfinished ...>
+34724 close(13)                         = 0
+34727 <... mprotect resumed>)           = 0
+34724 futex(0x5638a389af78, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+34727 mmap(0x3f7b67000000, 520192, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE, -1, 0) = 0x3f7b67000000
+34727 munmap(0x3f7b67040000, 258048)    = 0
+34727 mprotect(0x3f7b67000000, 262144, PROT_READ|PROT_WRITE) = 0
+34727 mprotect(0x563820d80000, 8192, PROT_READ|PROT_WRITE) = 0
+34727 mprotect(0x563820d82000, 4096, PROT_NONE) = 0
+34727 madvise(0x563820d82000, 4096, MADV_DONTNEED) = 0
+34727 mprotect(0x563820d83000, 245760, PROT_READ|PROT_WRITE|PROT_EXEC) = 0
+34727 mprotect(0x563820dbf000, 4096, PROT_NONE) = 0
+34727 madvise(0x563820dbf000, 4096, MADV_DONTNEED) = 0
+34727 futex(0x5638a389af78, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+34724 <... futex resumed>)              = 0
+34727 <... futex resumed>)              = 1
+34724 futex(0x5638a389af00, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+34727 futex(0x5638a389af00, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+34724 <... futex resumed>)              = -1 EAGAIN (Ressource temporairement non disponible)
+34727 <... futex resumed>)              = 0
+34724 futex(0x5638a389af00, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+34727 futex(0x5638a38c6494, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+34724 <... futex resumed>)              = 0
+34724 munmap(0x7f46be2dd000, 135168)    = 0
+34724 gettid()                          = 34724
+34724 munmap(0x7b057640000, 262144)     = 0
+34724 munmap(0x1b6b3f0c0000, 262144)    = 0
+34724 munmap(0x109452500000, 262144)    = 0
+34724 munmap(0x178a7f780000, 262144)    = 0
+34724 munmap(0x1987ec8c0000, 262144)    = 0
+34724 munmap(0x218234bc0000, 262144)    = 0
+34724 munmap(0x1235461c0000, 262144)    = 0
+34724 munmap(0xb4773600000, 262144)     = 0
+34724 munmap(0x11942e380000, 262144)    = 0
+34724 munmap(0x21e2a48c0000, 262144)    = 0
+34724 munmap(0x1ab7ff880000, 262144)    = 0
+34724 munmap(0x3de7cc480000, 262144)    = 0
+34724 munmap(0x7424abc0000, 262144)     = 0
+34724 munmap(0x117269040000, 262144)    = 0
+34724 munmap(0x3b0f5e8c0000, 262144)    = 0
+34724 munmap(0x292fd5f80000, 262144)    = 0
+34724 munmap(0x14d432700000, 262144)    = 0
+34724 munmap(0x352c35c0000, 262144)     = 0
+34724 munmap(0x120658a80000, 262144)    = 0
+34724 munmap(0x283628100000, 262144)    = 0
+34724 munmap(0x240f97240000, 262144)    = 0
+34724 munmap(0x26180ec80000, 131072)    = 0
+34724 munmap(0x830e4000000, 262144)     = 0
+34724 munmap(0x15d476280000, 262144)    = 0
+34724 munmap(0xe71e3540000, 262144)     = 0
+34724 munmap(0x229b51140000, 262144)    = 0
+34724 munmap(0xbe576580000, 262144)     = 0
+34724 munmap(0x1836add80000, 262144)    = 0
+34724 munmap(0x32521a6c0000, 262144)    = 0
+34724 munmap(0x119d81d40000, 262144)    = 0
+34724 munmap(0x37fbbab40000, 262144)    = 0
+34724 munmap(0x1ebdfedc0000, 262144)    = 0
+34724 munmap(0x2abc49840000, 262144)    = 0
+34724 munmap(0x2a2a37340000, 262144)    = 0
+34724 munmap(0x3f7b67000000, 262144)    = 0
+34724 mprotect(0x563820d80000, 262144, PROT_NONE) = 0
+34724 madvise(0x563820d80000, 262144, MADV_DONTNEED) = 0
+34724 munmap(0x1d9326280000, 192512)    = 0
+34724 munmap(0x5774ce80000, 196608)     = 0
+34724 munmap(0x2fd98a100000, 65536)     = 0
+34724 mprotect(0x2422c8580000, 262144, PROT_NONE) = 0
+34724 madvise(0x2422c8580000, 262144, MADV_DONTNEED) = 0
+34724 mprotect(0x3a6ea6280000, 262144, PROT_NONE) = 0
+34724 madvise(0x3a6ea6280000, 262144, MADV_DONTNEED) = 0
+34724 mprotect(0x191141640000, 262144, PROT_NONE) = 0
+34724 madvise(0x191141640000, 262144, MADV_DONTNEED) = 0
+34724 mprotect(0x5d8f6180000, 262144, PROT_NONE) = 0
+34724 madvise(0x5d8f6180000, 262144, MADV_DONTNEED) = 0
+34724 munmap(0x5d8f6180000, 262144)     = 0
+34724 munmap(0x191141640000, 262144)    = 0
+34724 munmap(0x3a6ea6280000, 262144)    = 0
+34724 munmap(0x2422c8580000, 262144)    = 0
+34724 munmap(0x7f46c04a2000, 135168)    = 0
+34724 munmap(0x563820d80000, 536870912) = 0
+34724 futex(0x7f46bff78688, FUTEX_WAKE_PRIVATE, 1) = 1
+34726 <... futex resumed>)              = 0
+34724 sched_yield()                     = 0
+34726 stat("/home/mrcool/.cache/deno/dep_analysis_cache_v1",  <unfinished ...>
+34724 futex(0x7f46c0179688, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+34726 <... stat resumed>{st_mode=S_IFREG|0644, st_size=1851392, ...}) = 0
+34724 <... futex resumed>)              = 1
+34725 <... futex resumed>)              = 0
+34726 fstat(9,  <unfinished ...>
+34725 stat("/home/mrcool/.cache/deno/node_analysis_cache_v1",  <unfinished ...>
+34726 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=1851392, ...}) = 0
+34725 <... stat resumed>{st_mode=S_IFREG|0644, st_size=598016, ...}) = 0
+34726 stat("/home/mrcool/.cache/deno/dep_analysis_cache_v1",  <unfinished ...>
+34725 fstat(11,  <unfinished ...>
+34726 <... stat resumed>{st_mode=S_IFREG|0644, st_size=1851392, ...}) = 0
+34724 write(4, "\1\0\0\0\0\0\0\0", 8 <unfinished ...>
+34725 <... fstat resumed>{st_mode=S_IFREG|0644, st_size=598016, ...}) = 0
+34724 <... write resumed>)              = 8
+34726 munmap(0x7f46be31f000, 1851392 <unfinished ...>
+34724 epoll_wait(3,  <unfinished ...>
+34725 stat("/home/mrcool/.cache/deno/node_analysis_cache_v1",  <unfinished ...>
+34724 <... epoll_wait resumed>[{events=EPOLLIN, data={u32=2147483648, u64=2147483648}}], 1024, -1) = 1
+34726 <... munmap resumed>)             = 0
+34725 <... stat resumed>{st_mode=S_IFREG|0644, st_size=598016, ...}) = 0
+34724 close(3 <unfinished ...>
+34726 close(9 <unfinished ...>
+34724 <... close resumed>)              = 0
+34725 futex(0x5638a26aaf00, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+34724 close(8 <unfinished ...>
+34726 <... close resumed>)              = 0
+34724 <... close resumed>)              = 0
+34726 futex(0x5638a26aaf00, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+34724 futex(0x7f46c017ae48, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+34726 <... futex resumed>)              = 1
+34725 <... futex resumed>)              = 0
+34726 futex(0x5638a26aad80, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+34725 futex(0x5638a26aad80, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+34726 <... futex resumed>)              = -1 EAGAIN (Ressource temporairement non disponible)
+34725 <... futex resumed>)              = 0
+34726 futex(0x5638a26aad80, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+34725 munmap(0x7f46be4e3000, 598016 <unfinished ...>
+34726 <... futex resumed>)              = 0
+34726 sigaltstack({ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=8192},  <unfinished ...>
+34725 <... munmap resumed>)             = 0
+34726 <... sigaltstack resumed>NULL)    = 0
+34725 close(11 <unfinished ...>
+34726 munmap(0x7f46c04c3000, 12288 <unfinished ...>
+34725 <... close resumed>)              = 0
+34726 <... munmap resumed>)             = 0
+34725 futex(0x5638a26aaf00, FUTEX_WAKE_PRIVATE, 1) = 0
+34726 rt_sigprocmask(SIG_BLOCK, ~[RT_1],  <unfinished ...>
+34725 futex(0x7f46c017ae48, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+34726 <... rt_sigprocmask resumed>NULL, 8) = 0
+34724 <... futex resumed>)              = 0
+34725 <... futex resumed>)              = 1
+34726 madvise(0x7f46bfd78000, 2076672, MADV_DONTNEED <unfinished ...>
+34724 futex(0x7f46c0179990, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 34725, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+34725 close(5 <unfinished ...>
+34726 <... madvise resumed>)            = 0
+34725 <... close resumed>)              = 0
+34726 exit(0 <unfinished ...>
+34725 close(4 <unfinished ...>
+34726 <... exit resumed>)               = ?
+34725 <... close resumed>)              = 0
+34726 +++ exited with 0 +++
+34725 sigaltstack({ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=8192}, NULL) = 0
+34725 munmap(0x7f46c04c6000, 12288)     = 0
+34725 rt_sigprocmask(SIG_BLOCK, ~[RT_1], NULL, 8) = 0
+34725 madvise(0x7f46bff79000, 2076672, MADV_DONTNEED) = 0
+34725 exit(0)                           = ?
+34725 +++ exited with 0 +++
+34724 <... futex resumed>)              = 0
+34724 sigaltstack({ss_sp=NULL, ss_flags=SS_DISABLE, ss_size=8192}, NULL) = 0
+34724 munmap(0x7f46c04c9000, 12288)     = 0
+34724 exit_group(0)                     = ?
+34729 <... futex resumed>)              = ?
+34728 <... futex resumed>)              = ?
+34727 <... futex resumed>)              = ?
+34729 +++ exited with 0 +++
+34728 +++ exited with 0 +++
+34727 +++ exited with 0 +++
+34724 +++ exited with 0 +++
