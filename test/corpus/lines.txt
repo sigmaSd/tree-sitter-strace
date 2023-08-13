@@ -596,9 +596,19 @@ Interleaf
 --------------------------------------------------------------------------------
 
 (source_file
-  (interleaf
+  (line
     (pid
-      (integer)))
-  (interleaf
+      (integer))
+    (syscall)
+    (parameters
+      (parameter
+        (values
+          (value
+            (pointer))))
+      (parameter
+        (values
+          (value
+            (integer))))))
+  (resumed
     (pid
       (integer))))
