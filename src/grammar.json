@@ -16,10 +16,6 @@
           },
           {
             "type": "SYMBOL",
-            "name": "resumed"
-          },
-          {
-            "type": "SYMBOL",
             "name": "exit"
           }
         ]
@@ -41,8 +37,54 @@
           ]
         },
         {
-          "type": "SYMBOL",
-          "name": "syscall"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "syscall"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "<..."
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "syscall"
+                },
+                {
+                  "type": "STRING",
+                  "value": "resumed>"
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "STRING",
+                      "value": "=>"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "STRING",
+                      "value": ","
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "type": "SYMBOL",
@@ -72,19 +114,6 @@
               "type": "BLANK"
             }
           ]
-        }
-      ]
-    },
-    "resumed": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "pid"
-        },
-        {
-          "type": "PATTERN",
-          "value": ".*<.*\\.\\.\\..*resumed.*>.*"
         }
       ]
     },
@@ -121,8 +150,16 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "("
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "("
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "REPEAT",

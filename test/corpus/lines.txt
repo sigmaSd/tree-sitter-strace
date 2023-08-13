@@ -609,6 +609,111 @@ Interleaf
         (values
           (value
             (integer))))))
-  (resumed
+  (line
     (pid
+      (integer))
+    (syscall)
+    (parameters)
+    (returnValue
+      (integer))))
+
+================================================================================
+Resumed
+================================================================================
+
+34724 <... ioctl resumed>, {c_iflag=ICRNL, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+34724 <... ioctl resumed>, {c_iflag=ICRNL, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (line
+    (pid
+      (integer))
+    (syscall)
+    (parameters
+      (parameter
+        (dict
+          (dictElem
+            (dictKey)
+            (parameter
+              (values
+                (value))))
+          (dictElem
+            (dictKey)
+            (parameter
+              (values
+                (value)
+                (value)
+                (value)
+                (value)
+                (value)
+                (value)
+                (value)
+                (value))))
+          (dictElem
+            (dictKey)
+            (parameter
+              (values
+                (value)
+                (value)
+                (value))))
+          (dictElem
+            (dictKey)
+            (parameter
+              (values
+                (value)
+                (value)
+                (value)
+                (value)
+                (value)
+                (value)
+                (value)
+                (value)))))))
+    (returnValue
+      (integer)))
+  (line
+    (pid
+      (integer))
+    (syscall)
+    (parameters
+      (parameter
+        (dict
+          (dictElem
+            (dictKey)
+            (parameter
+              (values
+                (value))))
+          (dictElem
+            (dictKey)
+            (parameter
+              (values
+                (value)
+                (value)
+                (value)
+                (value)
+                (value)
+                (value)
+                (value)
+                (value))))
+          (dictElem
+            (dictKey)
+            (parameter
+              (values
+                (value)
+                (value)
+                (value))))
+          (dictElem
+            (dictKey)
+            (parameter
+              (values
+                (value)
+                (value)
+                (value)
+                (value)
+                (value)
+                (value)
+                (value)
+                (value)))))))
+    (returnValue
       (integer))))

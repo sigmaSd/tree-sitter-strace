@@ -3,11 +3,14 @@
 module.exports = grammar({
   name: "strace",
   rules: {
-    source_file: ($) => repeat(choice($.line, $.signal, $.resumed, $.exit)),
+    source_file: ($) => repeat(choice($.line, $.signal, $.exit)),
     line: ($) =>
       seq(
         optional($.pid),
-        $.syscall,
+        choice(
+          $.syscall,
+          seq("<...", $.syscall, "resumed>", optional("=>"), optional(","))
+        ),
         $.parameters,
         optional(
           seq(
@@ -16,13 +19,11 @@ module.exports = grammar({
             $._newline),
         )),
 
-    // 374673 <... close resumed>)             = 0
-    resumed: $ => seq($.pid, /.*<.*\.\.\..*resumed.*>.*/),
     signal: ($) => seq("---", $.value, $.dict, "---"),
     pid: $ => $.integer,
     syscall: () => /[a-z][a-z0-9_]*/,
     parameters: ($) =>
-      seq("(", repeat(seq($.parameter, optional(","),)), choice("<unfinished ...>", ")")),
+      seq(optional("("), repeat(seq($.parameter, optional(","),)), choice("<unfinished ...>", ")")),
 
     parameter: ($) =>
       seq(
@@ -85,11 +86,6 @@ module.exports = grammar({
         seq("(", ")"),)),
       ")"
     ),
-    // choice(
-    //   seq("flags", $.values),
-    //   /[^fI][a-zA-Z_ ]*/,
-    // ),
-    // ")"),
 
     dictFn: $ => seq($.dict, "=>", $.dict),
     dict: ($) => seq(
@@ -103,7 +99,6 @@ module.exports = grammar({
     dictElem: ($) => choice(
       seq($.dictKey, "=", optional($._dictValue))
       ,
-      //wait4(353295, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 353295
       seq($.macro, repeat1(seq("&&", $.macro)), "==", $.integer)
     ),
     macro: ($) => seq(/[A-Z]+/, '(', /[a-z]+/, ')'),
