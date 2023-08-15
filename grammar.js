@@ -1,4 +1,4 @@
-/// <reference path="./grammar.d.ts" />
+/// <reference path="./node_modules/tree-sitter-cli/dsl.d.ts" />
 
 module.exports = grammar({
   name: "strace",
