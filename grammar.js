@@ -100,7 +100,7 @@ module.exports = grammar({
       ,
       seq($.macro, repeat1(seq("&&", $.macro)), "==", $.integer)
     ),
-    macro: ($) => seq(/[A-Z]+/, '(', /[a-z]+/, ')'),
+    macro: () => seq(/[A-Z]+/, '(', /[a-z]+/, ')'),
     dictKey: () => /[a-z_][a-z_0-9]+/,
     _dictValue: ($) => choice(seq($.syscall, $.parameters), $.parameter),
 
