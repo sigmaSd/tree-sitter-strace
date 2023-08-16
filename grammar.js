@@ -3,7 +3,7 @@
 module.exports = grammar({
   name: "strace",
   rules: {
-    source_file: ($) => repeat(seq(optional($.pid), choice($.line, $.signal, $.exit))),
+    source_file: ($) => repeat(seq(optional($.pid), choice($.line, $.signal, $.exit, $.killSignal))),
     line: ($) =>
       seq(
         choice(
@@ -18,6 +18,8 @@ module.exports = grammar({
             $._newline),
         )),
 
+    //215175 +++ killed by SIGINT +++
+    killSignal: ($) => seq("+++", "killed", "by", $.value, "+++"),
     signal: ($) => seq("---", $.value, $.dict, "---"),
     pid: $ => $.integer,
     syscall: () => /[a-z][a-z0-9_]*/,

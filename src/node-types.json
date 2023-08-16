@@ -100,6 +100,21 @@
     }
   },
   {
+    "type": "killSignal",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "line",
     "named": true,
     "fields": {},
@@ -266,6 +281,10 @@
           "named": true
         },
         {
+          "type": "killSignal",
+          "named": true
+        },
+        {
           "type": "line",
           "named": true
         },
@@ -402,6 +421,10 @@
     "named": false
   },
   {
+    "type": "by",
+    "named": false
+  },
+  {
     "type": "comment",
     "named": true
   },
@@ -420,6 +443,10 @@
   {
     "type": "integer",
     "named": true
+  },
+  {
+    "type": "killed",
+    "named": false
   },
   {
     "type": "pointer",

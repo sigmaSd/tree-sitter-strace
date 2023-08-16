@@ -32,6 +32,10 @@
               {
                 "type": "SYMBOL",
                 "name": "exit"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "killSignal"
               }
             ]
           }
@@ -119,6 +123,31 @@
               "type": "BLANK"
             }
           ]
+        }
+      ]
+    },
+    "killSignal": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "+++"
+        },
+        {
+          "type": "STRING",
+          "value": "killed"
+        },
+        {
+          "type": "STRING",
+          "value": "by"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "value"
+        },
+        {
+          "type": "STRING",
+          "value": "+++"
         }
       ]
     },
