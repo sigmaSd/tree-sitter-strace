@@ -101,7 +101,7 @@ module.exports = grammar({
     dictElem: ($) => choice(
       seq($.dictKey, "=", optional($._dictValue))
       ,
-      seq($.macro, repeat1(seq("&&", $.macro)), "==", $.integer)
+      seq($.macro, repeat1(seq("&&", $.macro)), "==", $.value),
     ),
     macro: () => seq(/[A-Z]+/, '(', /[a-z]+/, ')'),
     dictKey: () => /[a-z_][a-z_0-9]+/,

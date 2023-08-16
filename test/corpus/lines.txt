@@ -774,3 +774,33 @@ kill signal
     (integer))
   (killSignal
     (value)))
+
+================================================================================
+macro == value
+================================================================================
+
+215170 <... wait4 resumed>[{WIFSIGNALED(s) && WTERMSIG(s) == SIGINT}], 0, NULL) = 215171
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (pid
+    (integer))
+  (line
+    (syscall)
+    (parameters
+      (parameter
+        (list
+          (parameter
+            (dict
+              (dictElem
+                (macro)
+                (macro)
+                (value))))))
+      (parameter
+        (values
+          (value
+            (integer))))
+      (parameter))
+    (returnValue
+      (integer))))

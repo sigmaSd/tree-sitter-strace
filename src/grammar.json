@@ -761,7 +761,7 @@
             },
             {
               "type": "SYMBOL",
-              "name": "integer"
+              "name": "value"
             }
           ]
         }

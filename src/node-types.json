@@ -27,10 +27,6 @@
           "named": true
         },
         {
-          "type": "integer",
-          "named": true
-        },
-        {
           "type": "macro",
           "named": true
         },
@@ -44,6 +40,10 @@
         },
         {
           "type": "syscall",
+          "named": true
+        },
+        {
+          "type": "value",
           "named": true
         }
       ]
