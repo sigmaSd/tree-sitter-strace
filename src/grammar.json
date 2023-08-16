@@ -232,6 +232,32 @@
               "name": "dictFn"
             },
             {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "PATTERN",
+                  "value": "[a-z_]+"
+                },
+                {
+                  "type": "STRING",
+                  "value": "="
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "STRING",
+                      "value": "NULL"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "values"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "type": "STRING",
               "value": "NULL"
             }

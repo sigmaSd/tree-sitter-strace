@@ -32,6 +32,7 @@ module.exports = grammar({
           $.values,
           $.dict,
           $.dictFn,
+          seq(/[a-z_]+/, "=", choice("NULL", $.values)),
           "NULL",
         ),
         optional($.comment),
