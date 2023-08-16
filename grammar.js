@@ -22,7 +22,7 @@ module.exports = grammar({
     pid: $ => $.integer,
     syscall: () => /[a-z][a-z0-9_]*/,
     parameters: ($) =>
-      seq(optional("("), repeat(seq($.parameter, optional(","),)), choice("<unfinished ...>", ")")),
+      seq(optional("("), repeat(seq($.parameter, optional(","),)), choice("<unfinished ...>", ")"), optional(")")),
 
     parameter: ($) =>
       seq(

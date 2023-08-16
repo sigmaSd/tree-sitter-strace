@@ -744,3 +744,19 @@ assign parameter (a=b)
             (pointer)))))
     (returnValue
       (integer))))
+
+================================================================================
+resumed + finished immediatly
+================================================================================
+
+215173 <... epoll_wait resumed> <unfinished ...>) = ?
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (pid
+    (integer))
+  (line
+    (syscall)
+    (parameters)
+    (returnValue)))
