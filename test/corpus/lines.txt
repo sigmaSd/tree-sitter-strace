@@ -804,3 +804,58 @@ macro == value
       (parameter))
     (returnValue
       (integer))))
+
+================================================================================
+parameter inside comment
+================================================================================
+
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=5167, si_uid=1002, si_status=0, si_utime=5 /* 0.05 s */, si_stime=1 /* 0.01 s */} ---
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (signal
+    (value)
+    (dict
+      (dictElem
+        (dictKey)
+        (parameter
+          (values
+            (value))))
+      (dictElem
+        (dictKey)
+        (parameter
+          (values
+            (value))))
+      (dictElem
+        (dictKey)
+        (parameter
+          (values
+            (value
+              (integer)))))
+      (dictElem
+        (dictKey)
+        (parameter
+          (values
+            (value
+              (integer)))))
+      (dictElem
+        (dictKey)
+        (parameter
+          (values
+            (value
+              (integer)))))
+      (dictElem
+        (dictKey)
+        (parameter
+          (values
+            (value
+              (integer)))
+          (comment)))
+      (dictElem
+        (dictKey)
+        (parameter
+          (values
+            (value
+              (integer)))
+          (comment))))))

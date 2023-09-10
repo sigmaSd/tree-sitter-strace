@@ -70,7 +70,11 @@ module.exports = grammar({
     pointer: () => /0x[0-9a-fA-F]+/,
     values: ($) => seq($.value, repeat(seq(choice("|", "*"), $.value))),
     value: ($) => choice(/[A-Z0-9_]+/, $.integer, $.pointer),
-    comment: () => /\/\*.*\*\//,
+    comment: $ => seq(
+      "/*",
+      repeat(choice($.comment, /[^*]/)),
+      "*/"
+    ),
     _newline: () => /\r?\n/,
 
     returnValue: ($) =>

@@ -1,5 +1,20 @@
 [
   {
+    "type": "comment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "comment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "dict",
     "named": true,
     "fields": {},
@@ -369,6 +384,10 @@
     "named": false
   },
   {
+    "type": "*/",
+    "named": false
+  },
+  {
     "type": "+++",
     "named": false
   },
@@ -382,6 +401,10 @@
   },
   {
     "type": "...",
+    "named": false
+  },
+  {
+    "type": "/*",
     "named": false
   },
   {
@@ -423,10 +446,6 @@
   {
     "type": "by",
     "named": false
-  },
-  {
-    "type": "comment",
-    "named": true
   },
   {
     "type": "dictKey",
