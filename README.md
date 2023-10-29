@@ -12,7 +12,10 @@ npx tree-sitter parse examples/* --quiet --stat
 
 ## Use with helix
 
-Add this to helix languages.toml
+Starting helix 20.10, tree-sitter-strace is included by default. It triggers when a file ends with `.strace`, so you don't need to do the instructions below.
+
+Instruction for helix before 23.10, add this to helix languages.toml
+
 ```toml
 [[grammar]]
 name = "strace"
